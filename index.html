@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="Riishi Kalawatia – Operations &amp; Strategy Leader">
 <meta name="twitter:description" content="I turn operations into measurable growth. Startup builder from 1 to 1,000 employees.">
 <meta name="twitter:image" content="https://riishikalawatia.com/assets/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Riishi Kalawatia", "alternateName": "Rishi Kumar Kalawatia", "url": "https://riishikalawatia.com/", "image": "https://riishikalawatia.com/assets/riishi.jpg", "jobTitle": "Founder & CEO, DBBS Group", "description": "Operations & strategy leader with 25+ years across retail, logistics, manufacturing and food services; startup builder from 1 to 1,000 employees.", "address": {"@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN"}, "email": "mailto:riishi14.kalawatia@gmail.com", "telephone": "+91-8951409744", "worksFor": [{"@type": "Organization", "name": "DBBS Group", "url": "https://dbbsgroup.com"}, {"@type": "Organization", "name": "Aafina Technologies and Consulting Services Private Limited"}, {"@type": "Organization", "name": "Garage (Starfish Accelerator Partners Private Limited)"}], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Bharath Institute of Higher Education and Research"}, "knowsAbout": ["Operations management", "Supply chain", "E-commerce fulfillment", "Cold chain", "Startup scaling", "Product requirements", "Lean Six Sigma"], "sameAs": ["https://www.linkedin.com/in/riishi-kalawatia/", "https://x.com/RishiKalawatia", "https://www.instagram.com/kalawatiarishi/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Riishi Kalawatia", "alternateName": "Rishi Kumar Kalawatia", "url": "https://riishikalawatia.com/", "image": "https://riishikalawatia.com/assets/riishi.jpg", "jobTitle": "Founder & CEO, DBBS Group", "description": "Operations & strategy leader with 25+ years across retail, logistics, manufacturing and food services; startup builder from 1 to 1,000 employees.", "address": {"@type": "PostalAddress", "addressLocality": "Bengaluru", "addressRegion": "Karnataka", "addressCountry": "IN"}, "email": "mailto:riishi14.kalawatia@gmail.com", "telephone": "+91-8951409744", "worksFor": [{"@type": "Organization", "name": "DBBS Group", "url": "https://dbbsgroup.com"}, {"@type": "Organization", "name": "Aafina Technologies and Consulting Services Private Limited", "url": "https://aafinatech.com"}, {"@type": "Organization", "name": "Garage (Starfish Accelerator Partners Private Limited)"}], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Bharath Institute of Higher Education and Research"}, "knowsAbout": ["Operations management", "Supply chain", "E-commerce fulfillment", "Cold chain", "Startup scaling", "Product requirements", "Lean Six Sigma"], "sameAs": ["https://www.linkedin.com/in/riishi-kalawatia/", "https://x.com/RishiKalawatia", "https://www.instagram.com/kalawatiarishi/"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap">
@@ -51,7 +51,7 @@ h1,h2,h3{font-family:Montserrat,Inter,sans-serif;line-height:1.15;margin:0;lette
 header.site{position:sticky;top:0;z-index:50;background:rgba(11,26,58,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.mono{width:40px;height:40px;border-radius:10px;background:var(--accent);color:var(--navy);display:grid;place-items:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:16px;letter-spacing:.5px}
+.brand svg{flex:none}
 .brand span{font-family:Montserrat,sans-serif;font-weight:700;font-size:16px;letter-spacing:.3px}
 nav.main ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
 nav.main a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;color:var(--muted);text-decoration:none;font-size:15px;font-weight:500;border-radius:10px}
@@ -77,7 +77,10 @@ nav.main a:hover,nav.main a:focus-visible{color:#fff;background:rgba(255,255,255
 .tagline i{font-style:normal;color:rgba(255,255,255,.35);margin:0 6px}
 .btn.wa{background:#25D366;color:#06301A}
 .btn.wa:hover{background:#3ee07c}
-.e-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
+.e-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:44px}
+.e-grid .e-card{grid-column:span 2}
+.e-grid .e-card:nth-child(n+4){grid-column:span 3}
+.e-via{margin:12px 0 0;font-size:13px;font-weight:600;color:#2F7A17}
 .e-card{background:#fff;border:1px solid #E3E8F2;border-top:4px solid var(--accent);border-radius:var(--radius);padding:24px}
 .e-card h3{font-size:18px;font-weight:700;margin-bottom:12px}
 .e-card ul{margin:0;padding-left:18px;color:var(--ink-muted);font-size:15px}
@@ -184,6 +187,14 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
 .i-grid h3{font-size:19px;font-weight:700}
 .i-grid p{margin:0;color:var(--ink-muted);font-size:15px;text-align:justify;hyphens:auto}
 .i-grid .meta{font-size:13px;color:#8EA0BF;margin-top:auto}
+@media (max-width:1180px){
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  nav.main{position:absolute;top:68px;left:0;right:0;background:var(--navy);border-bottom:1px solid var(--line);display:none;max-height:calc(100vh - 68px);overflow-y:auto}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;padding:8px 16px 16px}
+  nav.main ul{display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+}
+@media (max-width:560px){nav.main ul{grid-template-columns:1fr}}
 @media (max-width:960px){.i-grid{grid-template-columns:1fr}}
 
 .startup{background:var(--navy);color:#fff}
@@ -228,6 +239,57 @@ footer.site a{color:inherit}
 .cert .cert-meta{color:var(--ink-muted);margin-top:6px;word-break:break-all}
 @media (max-width:760px){.cert-grid{grid-template-columns:1fr}}
 
+/* Sliders */
+.slider{position:relative}
+.s-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;padding:4px 2px 8px}
+.s-track::-webkit-scrollbar{display:none}
+.s-slide{flex:0 0 100%;scroll-snap-align:start;min-width:0}
+.s-ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+.s-btn{width:44px;height:44px;border-radius:50%;border:1px solid #C9D2E3;background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.s-btn:hover{border-color:#2F7A17;color:#2F7A17}
+.s-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.s-dots button{width:28px;height:28px;border:0;background:transparent;padding:0;cursor:pointer;display:grid;place-items:center}
+.s-dots button::before{content:"";width:9px;height:9px;border-radius:50%;background:#C9D2E3;transition:width .2s,background .2s}
+.s-dots button[aria-current="true"]::before{width:24px;border-radius:999px;background:#2F7A17}
+.ventures-strip{background:var(--navy);padding:0 0 56px}
+.ventures-strip .s-btn{background:transparent;border-color:rgba(255,255,255,.3);color:#fff}
+.ventures-strip .s-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ventures-strip .s-dots button::before{background:rgba(255,255,255,.3)}
+.ventures-strip .s-dots button[aria-current="true"]::before{background:var(--accent)}
+.v-slide img{width:100%;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.12)}
+.i-slider{margin-top:40px}
+.i-slider .s-slide{flex-basis:calc((100% - 40px)/3)}
+.i-slider .card{display:flex;flex-direction:column;gap:10px;background:var(--paper);border:1px solid #E3E8F2;border-top:4px solid var(--accent);border-radius:var(--radius);padding:24px;text-decoration:none;color:var(--ink)}
+.i-slider .ind{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#2F7A17}
+.i-slider h3{font-size:19px;font-weight:700}
+.i-slider p{margin:0;color:var(--ink-muted);font-size:15px;text-align:justify;hyphens:auto}
+.i-slider .meta{font-size:13px;color:#8EA0BF;margin-top:auto}
+.b-slider{margin-top:44px}
+.b-slider .s-slide{flex-basis:calc((100% - 20px)/2)}
+.t-slider{margin-top:44px}
+.t-slider .s-track{align-items:stretch}
+.t-slider .t-card{height:auto;box-sizing:border-box}
+.t-slider .t-person{margin-top:auto;padding-top:16px;border-top:1px solid #E3E8F2;align-items:flex-start;height:118px;box-sizing:border-box;overflow:hidden}
+.t-slider .t-person > div{min-width:0}
+.t-slider .t-person span:not(.t-rel){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.t-slider .t-person .t-rel{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t-card blockquote{display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
+.t-card.open blockquote{display:block}
+.t-more{align-self:flex-start;background:none;border:0;padding:6px 0;min-height:44px;font:inherit;font-size:14px;font-weight:600;color:#2F7A17;cursor:pointer;text-decoration:underline}
+.t-slider .s-slide{flex-basis:calc((100% - 40px)/3)}
+@media (max-width:960px){.i-slider .s-slide,.t-slider .s-slide{flex-basis:calc((100% - 20px)/2)}.b-slider .s-slide{flex-basis:100%}}
+@media (max-width:640px){.i-slider .s-slide,.t-slider .s-slide{flex-basis:88%}}
+@media (prefers-reduced-motion:reduce){.s-track{scroll-behavior:auto}}
+@media (max-width:640px){
+  .t-slider .t-person{height:auto;min-height:0}
+  .t-slider .t-person .t-rel{white-space:normal}
+  .t-slider .t-card blockquote{text-align:left;hyphens:manual}
+  .t-slider .t-person span:not(.t-rel){display:block;-webkit-line-clamp:unset}
+  .s-ctrl{gap:8px}
+  .s-dots{gap:0;flex-wrap:nowrap}
+  .s-dots button{width:22px}
+}
+
 /* Testimonials */
 .testimonials{background:var(--paper)}
 .t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:44px}
@@ -267,6 +329,27 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
   .book img{width:110px}
   .section{padding:72px 0}
 }
+
+/* Tablet layout (768-1180px) */
+@media (max-width:1180px){
+  .e-grid,.s-grid{grid-template-columns:repeat(2,1fr)}
+  .v-grid{grid-template-columns:repeat(2,1fr)}
+  .v-grid .venture:last-child{grid-column:1/-1}
+  .e-grid .e-card,.e-grid .e-card:nth-child(n+4){grid-column:auto}
+  .e-grid .e-card:last-child:nth-child(odd){grid-column:1/-1}
+  .c-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+  .c-card span{word-break:normal;overflow-wrap:anywhere}
+  .t-slider .s-slide,.i-slider .s-slide{flex-basis:calc((100% - 20px)/2)}
+  .pillar p,.s-card p,.venture p,.e-card li,.i-slider p,.t-card blockquote,.cert p{text-align:left;hyphens:manual}
+  .hero .wrap{gap:32px}
+}
+@media (max-width:960px){
+  .v-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .e-grid,.s-grid{grid-template-columns:1fr}
+  .c-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -275,7 +358,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Riishi Kalawatia, home">
-      <span class="mono" aria-hidden="true">RK</span>
+      <svg aria-hidden="true" width="40" height="40" viewBox="0 0 96 96"><path d="M14 76 L36 50 L56 62 L82 22" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 50 L36 82 M56 62 L56 82" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.35" stroke-linecap="round"/><circle cx="14" cy="76" r="8" fill="#FFFFFF"/><circle cx="36" cy="50" r="8" fill="#FFFFFF"/><circle cx="56" cy="62" r="8" fill="#FFFFFF"/><circle cx="82" cy="22" r="11" fill="#7CD65C"/></svg>
       <span>Riishi Kalawatia</span>
     </a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
@@ -355,6 +438,15 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
     </div>
   </section>
 
+  <section class="ventures-strip" aria-label="Ventures at a glance">
+    <div class="wrap">
+      <div class="slider" data-autoplay="5000" aria-roledescription="carousel" aria-label="Ventures at a glance">
+        <div class="s-track"><div class="s-slide v-slide"><a href="https://dbbsgroup.com" target="_blank" rel="noopener"><img src="assets/slides/venture-1.jpg" alt="DBBS Group, Jamaica: One partner, three critical functions. Finance, operations, technology." width="1584" height="396" loading="lazy"></a></div><div class="s-slide v-slide"><a href="https://dbbsgroup.com" target="_blank" rel="noopener"><img src="assets/slides/venture-2.jpg" alt="Databrilliance Business Solution, India: Data processing, simplified." width="1584" height="396" loading="lazy"></a></div><div class="s-slide v-slide"><a href="https://futureyou.global" target="_blank" rel="noopener"><img src="assets/slides/venture-3.jpg" alt="FutureYou by Aafina Technologies: Human readiness for the AI era." width="1584" height="396" loading="lazy"></a></div><div class="s-slide v-slide"><a href="https://skilligenhdi.com" target="_blank" rel="noopener"><img src="assets/slides/venture-4.jpg" alt="Skilligen HDI: Human Decision Infrastructure. Intent, clarity, consistency, trust." width="1584" height="396" loading="lazy"></a></div><div class="s-slide v-slide"><img src="assets/slides/venture-5.jpg" alt="Garage: One network for everyone. Global fulfillment for D2C, B2C, B2B and white-label commerce." width="1584" height="396" loading="lazy"></div></div>
+        <div class="s-ctrl"><button type="button" class="s-btn s-prev" aria-label="Previous venture"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="s-dots" role="group" aria-label="Choose slide"></div><button type="button" class="s-btn s-next" aria-label="Next venture"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="about">
     <div class="wrap about-grid">
       <div>
@@ -410,6 +502,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
         <div class="e-card"><h3>Retail &amp; Food Services</h3><ul><li>Store and outlet operations</li><li>P&amp;L and profitability reviews</li><li>Customer experience standards</li></ul></div>
         <div class="e-card"><h3>E-commerce &amp; Logistics</h3><ul><li>Fulfillment and warehouse setup</li><li>Delivery TAT and last-mile</li><li>D2C, B2C &amp; B2B operations</li></ul></div>
         <div class="e-card"><h3>Manufacturing &amp; Commercial</h3><ul><li>Purchase and expenditure control</li><li>Dealer claims and settlements</li><li>Process improvement (Lean, DMAIC)</li></ul></div>
+        <div class="e-card"><h3>Post-AI Business Models</h3><ul><li>Business model re-engineering for the post-AI economy</li><li>Direct &amp; affiliate marketing models, national to global</li><li>Distribution models built for cash flow</li><li>Wellness business development</li></ul><p class="e-via">Through Aafina Technologies &amp; Consulting</p></div>
         <div class="e-card"><h3>Startups &amp; SMEs</h3><ul><li>Scaling teams from 1 to 1,000</li><li>Product requirements &amp; user testing</li><li>SOPs, data, accounting &amp; ERP/CRM</li></ul></div>
       </div>
     </div>
@@ -438,9 +531,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
           <p class="role">Director</p>
           <h3>Aafina Technologies and Consulting Services Private Limited</h3>
           <p class="since">Since October 2024 &middot; with Dr. Amanulla Khan</p>
-          <p>Building Human Readiness for the AI era. I lead business strategy, the partner licensing model and partnerships with training institutes in India and abroad.</p>
-          <ul><li>FutureYou.global: Human Readiness platform (MVP)</li><li>SkilligenHDI.com: Human Decision Infrastructure</li><li>Publishing: two books by Dr. Amanulla Khan</li></ul>
-          <div class="links"><a class="chip" href="https://futureyou.global" target="_blank" rel="noopener">futureyou.global</a><a class="chip" href="https://skilligenhdi.com" target="_blank" rel="noopener">skilligenhdi.com</a></div>
+          <p>Aafina works through two verticals. <strong>Technologies</strong> builds its own platforms and holds global solution partnerships and distribution rights. <strong>Consulting</strong> helps businesses re-engineer their models for the post-AI economy. I lead strategy, partnerships and licensing.</p>
+          <ul><li>FutureYou: Human Readiness platform for the AI era (MVP)</li><li>Skilligen&trade; HDI: Human Decision Infrastructure</li><li>Post-AI business model, distribution and direct/affiliate marketing design</li><li>Publishing: two books by Dr. Amanulla Khan</li></ul>
+          <div class="links"><a class="chip" href="https://aafinatech.com" target="_blank" rel="noopener">aafinatech.com</a><a class="chip" href="https://futureyou.global" target="_blank" rel="noopener">futureyou.global</a><a class="chip" href="https://skilligenhdi.com" target="_blank" rel="noopener">skilligenhdi.com</a></div>
         </article>
         <article class="venture">
           <div class="logos"><img src="assets/garage-logo.png" alt="Garage" style="height:48px;width:auto"></div>
@@ -460,7 +553,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <h2>25 years, built on the ground</h2>
       <ol class="timeline">
         <li class="now"><p class="when">Jul 2026 &ndash; Present</p><h3>Global Head of Fulfillment <span>&middot; Garage</span></h3><p>Leading global fulfillment for a platform built for D2C, B2C, B2B and white-label commerce.</p></li>
-        <li class="now"><p class="when">Oct 2024 &ndash; Present</p><h3>Director <span>&middot; Aafina Technologies and Consulting Services Private Limited</span></h3><p>Strategy, partner licensing and partnerships for FutureYou and Skilligen HDI; publishing.</p></li>
+        <li class="now"><p class="when">Oct 2024 &ndash; Present</p><h3>Director <span>&middot; Aafina Technologies and Consulting Services Private Limited</span></h3><p>Technologies and Consulting verticals: FutureYou and Skilligen HDI platforms, global solution partnerships, post-AI business model and distribution consulting; publishing.</p></li>
         <li class="now"><p class="when">Jan 2021 &ndash; Present</p><h3>Founder &amp; CEO <span>&middot; DBBS Group / Databrilliance</span></h3><p>Business services across India and Jamaica: data, accounting, analytics, ERP/CRM and operations.</p></li>
         <li><p class="when">Jan 2020 &ndash; Jul 2021</p><h3>Head of Operations <span>&middot; OTP Xpress</span></h3><p>Directed end-to-end business operations and logistics management, and worked closely with the CTO on product requirements and first user testing.</p></li>
         <li><p class="when">Aug 2018 &ndash; Nov 2019</p><h3>Store Head <span>&middot; bigbasket</span></h3><p>Warehouse operations, slot-based delivery TAT, order management and warehouse-level P&amp;L.</p><p class="award"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13L17 22l-5-3l-5 3l1.5-9"/></svg>Award: 2nd rank pan-India for cold chain operations</p></li>
@@ -476,8 +569,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <p class="eyebrow" style="color:#2F7A17">Books</p>
       <h2>Published by Aafina Technologies and Consulting Services Private Limited</h2>
       <p class="lead">Two works by Dr. Amanulla Khan, which I helped bring to publication.</p>
-      <div class="b-grid">
-        <article class="book">
+      <div class="slider b-slider" data-autoplay="7000" aria-roledescription="carousel" aria-label="Books">
+        <div class="s-track">
+        <article class="book s-slide">
           <img src="assets/hr-kindle-cover.jpg" alt="Cover of Human Readiness in the AI &amp; SI Era by Dr. Amanulla Khan">
           <div>
             <span class="tag">Now on Kindle</span>
@@ -486,7 +580,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
             <p>By Dr. Amanulla Khan</p>
           </div>
         </article>
-        <article class="book">
+        <article class="book s-slide">
           <img src="assets/hdi-cover.jpg" alt="Cover of Human Decision Infrastructure (HDI) by Dr. Amanulla Khan">
           <div>
             <h3>Human Decision Infrastructure (HDI)</h3>
@@ -494,6 +588,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
             <p>By Dr. Amanulla Khan</p>
           </div>
         </article>
+      </div>
+        <div class="s-ctrl"><button type="button" class="s-btn s-prev" aria-label="Previous book"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="s-dots" role="group" aria-label="Choose slide"></div><button type="button" class="s-btn s-next" aria-label="Next book"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
       </div>
     </div>
   </section>
@@ -527,7 +623,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <p class="eyebrow" style="color:#2F7A17">Insights</p>
       <h2>Practical playbooks for startups, SMEs and global operators</h2>
       <p class="lead">Start with the guides for founders and SME owners, then explore lessons from retail, food services, cold chain, e-commerce, manufacturing and business services.</p>
-      <div class="i-grid"><a class="card" href="blog/from-1-to-1000-operations-playbook.html"><span class="ind">Startups & SMEs</span><h3>From 1 to 1,000: An Operations Playbook for Scaling a Startup</h3><p>Every startup breaks at predictable points as it grows. Knowing what changes at each stage lets founders fix things before they break.</p><span class="meta">7 min read &middot; November 2026</span></a><a class="card" href="blog/bridging-business-and-tech.html"><span class="ind">Startups & SMEs</span><h3>Bridging Business and Tech: Product Requirements Your Developers Can Build</h3><p>Many startups burn months building the wrong features. The gap is rarely technical skill. It is the translation between how the business works and what the tech team is asked to build.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card" href="blog/sme-operations-health-check.html"><span class="ind">Startups & SMEs</span><h3>The SME Operations Health Check: 10 Questions to Ask Before You Scale</h3><p>Before you raise money, open a new location or enter a new market, ask these ten questions. The answers show whether your operations are ready to grow.</p><span class="meta">5 min read &middot; November 2026</span></a></div>
+      <div class="slider i-slider" aria-roledescription="carousel" aria-label="Insights articles">
+        <div class="s-track"><a class="card s-slide" href="blog/from-1-to-1000-operations-playbook.html"><span class="ind">Startups & SMEs</span><h3>From 1 to 1,000: An Operations Playbook for Scaling a Startup</h3><p>Every startup breaks at predictable points as it grows. Knowing what changes at each stage lets founders fix things before they break.</p><span class="meta">7 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/bridging-business-and-tech.html"><span class="ind">Startups & SMEs</span><h3>Bridging Business and Tech: Product Requirements Your Developers Can Build</h3><p>Many startups burn months building the wrong features. The gap is rarely technical skill. It is the translation between how the business works and what the tech team is asked to build.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/sme-operations-health-check.html"><span class="ind">Startups & SMEs</span><h3>The SME Operations Health Check: 10 Questions to Ask Before You Scale</h3><p>Before you raise money, open a new location or enter a new market, ask these ten questions. The answers show whether your operations are ready to grow.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/cold-chain-is-a-promise.html"><span class="ind">Grocery & Cold Chain</span><h3>Cold Chain Is a Promise: What Online Grocery Gets Wrong</h3><p>Customers never see your cold chain. They only see whether the milk is cold and the vegetables are fresh. Here is how to keep that promise at scale.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/one-network-many-models.html"><span class="ind">E-commerce & Fulfillment</span><h3>One Network, Many Models: Fulfillment for D2C, B2C and B2B Across Borders</h3><p>Brands now sell direct, through marketplaces and to businesses at the same time. Fulfillment has to serve all three without building three separate operations.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/retail-operations-that-scale.html"><span class="ind">Retail</span><h3>Store Operations That Scale: Lessons From the Retail Floor</h3><p>Great retail operations look simple from the outside. Behind every calm store is a set of habits that work on the busiest day of the year, not just an average Tuesday.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/qsr-profitability-shift-by-shift.html"><span class="ind">Food Services & QSR</span><h3>QSR Profitability Is Built Shift by Shift</h3><p>In quick-service restaurants, the margin is won or lost in hundreds of small decisions every day. Here is where to look.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/purchase-discipline-in-manufacturing.html"><span class="ind">Manufacturing</span><h3>Purchase Discipline in Manufacturing: Where Profit Quietly Leaks</h3><p>In manufacturing, margin is often lost long before production starts, in purchasing, expenditure approvals and dealer settlements.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/back-office-as-a-growth-engine.html"><span class="ind">Business Services</span><h3>The Back Office as a Growth Engine for Small and Mid-Sized Businesses</h3><p>For growing companies, data, accounting and ERP work can either slow the business down or give it the clarity to scale. Outsourcing done right makes the difference.</p><span class="meta">5 min read &middot; November 2026</span></a></div>
+        <div class="s-ctrl"><button type="button" class="s-btn s-prev" aria-label="Previous article"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="s-dots" role="group" aria-label="Choose slide"></div><button type="button" class="s-btn s-next" aria-label="Next article"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
+      </div>
+      <div class="dl-box">
+        <div><b>Free checklist: The SME Operations Health Check</b><span>10 questions to ask before you scale. One page, ready to print.</span></div>
+        <a class="btn primary" href="assets/SME-Operations-Health-Check.pdf" target="_blank" rel="noopener">Get the checklist (PDF)</a>
+      </div>
       <p style="margin-top:28px"><a class="btn ghost-dark" href="blog/index.html">Read all insights</a></p>
     </div>
   </section>
@@ -537,7 +640,10 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <p class="eyebrow" style="color:#2F7A17">Recommendations</p>
       <h2>What people say</h2>
       <p class="lead">Recommendations from colleagues and partners on LinkedIn.</p>
-      <div class="t-grid" id="t-grid"></div>
+      <div class="slider t-slider" data-autoplay="8000" aria-roledescription="carousel" aria-label="Recommendations">
+        <div class="s-track" id="t-grid"></div>
+        <div class="s-ctrl"><button type="button" class="s-btn s-prev" aria-label="Previous recommendation"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="s-dots" role="group" aria-label="Choose slide"></div><button type="button" class="s-btn s-next" aria-label="Next recommendation"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
+      </div>
     </div>
   </section>
 
@@ -595,7 +701,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
           <div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
           <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
           <div class="full"><label for="f-topic">Area of enquiry</label>
-            <select id="f-topic" name="topic"><option>Startup / SME scaling &amp; health check</option><option>Operations consulting</option><option>E-commerce &amp; fulfillment</option><option>DBBS / Databrilliance services</option><option>FutureYou &amp; Skilligen HDI</option><option>Speaking or partnership</option><option>Other</option></select></div>
+            <select id="f-topic" name="topic"><option>Startup / SME scaling &amp; health check</option><option>Post-AI business model consulting (Aafina)</option><option>Operations consulting</option><option>E-commerce &amp; fulfillment</option><option>DBBS / Databrilliance services</option><option>FutureYou &amp; Skilligen HDI</option><option>Speaking or partnership</option><option>Other</option></select></div>
           <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
           <div class="full actions">
             <button class="btn primary" type="submit">Send by email</button>
@@ -609,7 +715,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 
 <footer class="site">
   <div class="wrap">
-    <span>&copy; 2026 Riishi Kalawatia &middot; Bengaluru, India</span>
+    <span style="display:inline-flex;align-items:center;gap:10px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 96 96"><path d="M14 76 L36 50 L56 62 L82 22" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 50 L36 82 M56 62 L56 82" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.35" stroke-linecap="round"/><circle cx="14" cy="76" r="8" fill="#FFFFFF"/><circle cx="36" cy="50" r="8" fill="#FFFFFF"/><circle cx="56" cy="62" r="8" fill="#FFFFFF"/><circle cx="82" cy="22" r="11" fill="#7CD65C"/></svg>&copy; 2026 Riishi Kalawatia &middot; Bengaluru, India</span>
     <span>DBBS Group &middot; Aafina Technologies &middot; Garage &middot; <a href="privacy.html">Privacy Policy</a></span>
     <span class="f-social"><a href="https://www.linkedin.com/in/riishi-kalawatia/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://x.com/RishiKalawatia" target="_blank" rel="noopener">X</a> &middot; <a href="https://www.instagram.com/kalawatiarishi/" target="_blank" rel="noopener">Instagram</a></span>
   </div>
@@ -622,18 +728,21 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 var RECOMMENDATIONS = [
   {
     "name": "Dr. (H.C.) Amanulla Khan",
+    "photo": "assets/people/amanulla-khan.jpg",
     "title": "Founder, Skilligen™ HDI · Author, Human Readiness in the AI & SI Era",
     "relation": "Riishi's mentor",
     "text": "Rishi is a genuine seeker and come up the hard way, simply due to his open mind to be coachable. He is a workaholic and is highly dedicated in any assignments he is assigned with, he not only learns quickly but transfers the required knowledge, and imparts it very effectively and empowers his team thereby delegating his team with clarity. He is dependable in times of crisis and resourceful and an asset to any organization. Wishing him good all the times."
   },
   {
     "name": "Siddhesh Upadhyay",
+    "photo": "assets/people/siddhesh-upadhyay.jpg",
     "title": "COO, Lakmé Lever",
     "relation": "Managed Riishi directly",
     "text": "Rishi worked as a Chief Cashier and then as Division Manager for Home Needs with me at Total Superstore. He has always worked towards improving the operational parameters and have consistently pushed himself and his team to perform better. His adaptability, learning and achievement orientation has been appreciable."
   },
   {
     "name": "Dipayan Bhattacharjee",
+    "photo": "assets/people/dipayan-bhattacharjee.jpg",
     "title": "Vice President – Sales & Market Expansion, Krishival",
     "relation": "Senior colleague",
     "text": "I have known Rishi from the time he was working with Bigbasket.com. A soft spoken gentleman. Very down to earth and a man manager are the things which comes to my mind when I think about him. Knows his business very well. I wish him all the success in life."
@@ -646,24 +755,28 @@ var RECOMMENDATIONS = [
   },
   {
     "name": "Neeraj Sharma",
+    "photo": "assets/people/neeraj-sharma.jpg",
     "title": "TA Head, Ola Electric · ex PhonePe, Dunzo",
-    "relation": "Worked with Riishi at OTP Xpress",
+    "relation": "OTP Xpress colleague",
     "text": "I had the opportunity to work with Rishi Kumar Kalawatia at OTP Xpress, where he was a VP - Operations. Rishi is a talented, innovative and passionate developer who always delivers high-quality solutions for complex problems. Rishi has a deep knowledge of various technologies and frameworks, such as Java, Spring Boot, Angular, AWS, etc. He is also very proficient at writing SQL queries, data manipulation and data visualization. He has a strong sense of design and can create user-friendly and attractive interfaces for web applications. Rishi is not only a great developer, but also a collaborative and supportive team member. He is always willing to help his peers, share his expertise and feedback, and learn new skills. He has also led and mentored many junior developers in the team and helped them grow professionally. Rishi is an asset to any organization that values creativity, excellence and innovation. I highly recommend him for any role that requires exceptional software engineering skills, enthusiasm and drive. He will surely impress you with his performance and potential."
   },
   {
     "name": "Pranay Agrawal",
+    "photo": "assets/people/pranay-agrawal.jpg",
     "title": "Senior Manager, Hilltop Stones Pvt Ltd (Giria's Group)",
     "relation": "Worked on the same team",
     "text": "“Incredibly Efficient and Supportive” is the phrase comes in my mind when I think for Mr. Rishi. It was pleasure working with him on Few Project Works."
   },
   {
     "name": "Prasad G S Sreekanta",
+    "photo": "assets/people/prasad-sreekanta.jpg",
     "title": "Real Estate Valuation & Business Growth Expert · Former COO",
     "relation": "Managed Riishi directly",
     "text": "Mr Rishi Kalawatia focused on carrier Growth understand the need of customer on several milestone achievements has be accomplished. Wish him all the best for future endurance."
   },
   {
     "name": "Kapil Dev Kanjilal",
+    "photo": "assets/people/kapil-kanjilal.jpg",
     "title": "E-commerce Sales Manager · ex Reliance, Amazon, Landmark Arabia",
     "relation": "Worked on the same team",
     "text": "Over the course of the last couple years, I have been pleased to watch the ongoing development of Rishi talents. Rishi skills have grown rapidly in the last couple years and keep growing. I wish all the best for his future."
@@ -673,23 +786,65 @@ var RECOMMENDATIONS = [
   var list=RECOMMENDATIONS, grid=document.getElementById('t-grid'), sec=document.getElementById('testimonials');
   if(!grid||!sec||!list.length) return;
   list.forEach(function(r){
-    var card=document.createElement('article'); card.className='t-card';
+    var card=document.createElement('article'); card.className='t-card s-slide';
     var q=document.createElement('blockquote'); q.textContent=r.text; card.appendChild(q);
     var p=document.createElement('div'); p.className='t-person';
     var av=document.createElement('div'); av.className='t-avatar';
     if(r.photo){var im=document.createElement('img'); im.src=r.photo; im.alt=r.name; av.appendChild(im);}
-    else{av.textContent=(r.name||'').split(' ').map(function(w){return w[0]||'';}).slice(0,2).join('').toUpperCase(); av.setAttribute('aria-hidden','true');}
+    else{av.textContent=(r.name||'').split(' ').filter(function(w){return /^[A-Za-z]/.test(w)&&!/^(Dr|Mr|Mrs|Ms)\.?$/i.test(w);}).map(function(w){return w[0];}).slice(0,2).join('').toUpperCase(); av.setAttribute('aria-hidden','true');}
     p.appendChild(av);
     var who=document.createElement('div');
     var b=document.createElement('b'); b.textContent=r.name;
     var t=document.createElement('span'); t.textContent=r.title||'';
     if(r.profile){var a=document.createElement('a'); a.href=r.profile; a.target='_blank'; a.rel='noopener'; a.appendChild(b); who.appendChild(a);} else who.appendChild(b);
-    who.appendChild(t); if(r.relation){var rl=document.createElement('span'); rl.className='t-rel'; rl.textContent=r.relation; who.appendChild(rl);} p.appendChild(who); card.appendChild(p); grid.appendChild(card);
+    who.appendChild(t); if(r.relation){var rl=document.createElement('span'); rl.className='t-rel'; rl.textContent=r.relation; who.appendChild(rl);} p.appendChild(who); grid.appendChild(card);
+    var more=document.createElement('button'); more.type='button'; more.className='t-more'; more.textContent='Read more';
+    more.addEventListener('click',function(){var o=card.classList.toggle('open'); more.textContent=o?'Show less':'Read more';});
+    card.appendChild(more); card.appendChild(p);
+    (function(q,more,card){function chk(){if(!card.classList.contains('open'))more.hidden=q.scrollHeight<=q.clientHeight+2;} requestAnimationFrame(chk); window.addEventListener('load',chk); window.addEventListener('resize',chk); if(document.fonts&&document.fonts.ready)document.fonts.ready.then(chk);})(q,more,card);
   });
   sec.hidden=false;
   var li=document.createElement('li'); li.innerHTML='<a href="#testimonials">Recommendations</a>';
   var nav=document.querySelector('#site-nav ul'); if(nav) nav.insertBefore(li, nav.lastElementChild);
 })();
+</script>
+<script>
+/* Sliders: arrows, dots, autoplay (paused on hover/focus and for reduced motion) */
+function initSliders(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.slider').forEach(function(sl){
+    if(sl.dataset.ready) return;
+    var track=sl.querySelector('.s-track'), slides=track.querySelectorAll('.s-slide');
+    var ctrl=sl.querySelector('.s-ctrl'), dotsBox=sl.querySelector('.s-dots');
+    if(!slides.length) return;
+    sl.dataset.ready='1';
+    function step(){var s=slides[0];var g=parseFloat(getComputedStyle(track).columnGap||getComputedStyle(track).gap)||0;return s.getBoundingClientRect().width+g;}
+    function perView(){return Math.max(1,Math.round(track.clientWidth/step()));}
+    function pages(){return Math.max(1,slides.length-perView()+1);}
+    function current(){return Math.round(track.scrollLeft/step());}
+    function go(i){var n=pages(); if(i<0)i=n-1; if(i>=n)i=0; track.scrollTo({left:i*step(),behavior:reduce?'auto':'smooth'});}
+    function buildDots(){
+      dotsBox.innerHTML='';
+      var n=pages(); ctrl.style.display=n>1?'':'none';
+      for(var i=0;i<n;i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',function(){go(i);});dotsBox.appendChild(b);})(i);}
+      mark();
+    }
+    function mark(){var c=Math.min(current(),pages()-1);dotsBox.querySelectorAll('button').forEach(function(b,i){b.setAttribute('aria-current',i===c?'true':'false');});}
+    sl.querySelector('.s-prev').addEventListener('click',function(){go(current()-1);});
+    sl.querySelector('.s-next').addEventListener('click',function(){go(current()+1);});
+    var t; track.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(mark,80);});
+    window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(buildDots,150);});
+    buildDots();
+    var ms=parseInt(sl.dataset.autoplay||'0',10), timer=null, paused=false;
+    function play(){if(!ms||reduce)return; stop(); timer=setInterval(function(){if(!paused&&!document.hidden)go(current()+1);},ms);}
+    function stop(){if(timer)clearInterval(timer);timer=null;}
+    sl.addEventListener('mouseenter',function(){paused=true;}); sl.addEventListener('mouseleave',function(){paused=false;});
+    sl.addEventListener('focusin',function(){paused=true;}); sl.addEventListener('focusout',function(){paused=false;});
+    track.addEventListener('touchstart',function(){paused=true;},{passive:true});
+    play();
+  });
+}
+initSliders();
 </script>
 <a class="wa-float" href="https://wa.me/918951409744" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4l-2-1l-.9.9a4 4 0 0 1-2.3-2.3l.9-.9l-1-2L9 9.5z"/></svg></a>
 

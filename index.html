@@ -350,6 +350,30 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
   .e-grid,.s-grid{grid-template-columns:1fr}
   .c-grid{grid-template-columns:1fr}
 }
+
+/* Method section */
+.method .m-flow{list-style:none;padding:0;margin:40px 0 0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:m}
+.m-flow li{position:relative;background:#fff;border:1px solid #E3E8F2;border-radius:var(--radius);padding:20px 16px 18px;counter-increment:m}
+.m-flow li::before{content:counter(m,decimal-leading-zero);display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:22px;color:#2F7A17;margin-bottom:8px}
+.m-flow li:not(:last-child)::after{content:"";position:absolute;right:-10px;top:50%;width:8px;height:8px;border-top:2px solid #2F7A17;border-right:2px solid #2F7A17;transform:translateY(-50%) rotate(45deg);z-index:1}
+.m-flow b{display:block;font-family:Montserrat,sans-serif;font-size:16px;margin-bottom:6px;color:var(--navy)}
+.m-flow span{font-size:14px;color:var(--ink-muted);line-height:1.45}
+.method h3.m-sub{font-size:22px;font-weight:800;margin:64px 0 6px}
+.m-note{color:var(--ink-muted);margin:0;font-size:15px}
+.k-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.k-card{background:#fff;border:1px solid #E3E8F2;border-radius:var(--radius);padding:24px}
+.k-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#2F7A17;background:#EEF8E9;border-radius:999px;padding:4px 10px;margin-bottom:12px}
+.k-card h4{font-family:Montserrat,sans-serif;font-size:17px;font-weight:700;margin:0 0 10px;color:var(--navy)}
+.k-card p{margin:0 0 8px;font-size:14.5px;color:var(--ink-muted);line-height:1.5}
+.k-card p b{color:var(--navy)}
+.tk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.tk-pill{background:var(--navy);color:#fff;border-radius:var(--radius);padding:24px}
+.tk-pill h4{font-family:Montserrat,sans-serif;font-size:17px;margin:0 0 10px;color:#fff}
+.tk-pill p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
+.m-quote{margin:28px 0 0;font-family:Montserrat,sans-serif;font-weight:700;font-size:18px;color:var(--navy)}
+.m-quote span{color:#2F7A17}
+@media (max-width:1180px){.method .m-flow{grid-template-columns:repeat(3,1fr)}.m-flow li::after{display:none}.k-grid,.tk-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.method .m-flow,.k-grid,.tk-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -493,6 +517,41 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
     </div>
   </section>
 
+  <section class="section method" id="method">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#2F7A17">My Method</p>
+      <h2>How I solve operational problems</h2>
+      <p class="lead">Different industries, same discipline. I follow every problem from the transaction where it starts to the improvement that fixes it for good.</p>
+      <ol class="m-flow" aria-label="Problem-solving method">
+        <li><b>Transaction</b><span>Start where the work actually happens: orders, invoices, transfers, dispatches.</span></li>
+        <li><b>Control</b><span>Check that every transaction has a clear rule, an owner and an approval.</span></li>
+        <li><b>Validation</b><span>Test the controls with data, not assumptions.</span></li>
+        <li><b>Exception</b><span>Find what does not fit: gaps, variances and red flags.</span></li>
+        <li><b>Insight</b><span>Separate facts from opinions and find the root cause.</span></li>
+        <li><b>Improvement</b><span>Fix the process, measure it, and make the fix stick.</span></li>
+      </ol>
+
+      <h3 class="m-sub">Same method, different industries</h3>
+      <p class="m-note">Selected engagements. Client names are kept confidential.</p>
+      <div class="k-grid">
+        <div class="k-card"><span class="k-tag">Hospitality</span><h4>Resort food &amp; beverage controls</h4><p><b>Challenge:</b> F&amp;B costs with no clear view of where money was leaking.</p><p><b>What I did:</b> Reviewed purchase orders, supplier invoices, store transfers, recipes and portion control, and built red-flag checks for each.</p><p><b>Outcome:</b> A control framework, exception reports, and a roadmap for par levels and booking-based forecasting.</p></div>
+        <div class="k-card"><span class="k-tag">Agriculture &amp; Manufacturing</span><h4>Tea producer: finance and factory controls</h4><p><b>Challenge:</b> Accounts, stock, dispatch, labour and compliance managed without a common control structure.</p><p><b>What I did:</b> Designed a two-level control system with clear escalation for exceptions.</p><p><b>Outcome:</b> Daily checks for the team, and only true exceptions reaching management.</p></div>
+        <div class="k-card"><span class="k-tag">Manufacturing</span><h4>Pipe manufacturing: material to dispatch</h4><p><b>Challenge:</b> Limited visibility of material flow, scrap and dispatch risk.</p><p><b>What I did:</b> Mapped the process end to end and set controls for scrap, traceability, commercial terms and transporters.</p><p><b>Outcome:</b> Reconciled MIS and earlier warning on losses.</p></div>
+        <div class="k-card"><span class="k-tag">E-grocery &amp; Cold Chain</span><h4>Warehouse SOP audits at scale</h4><p><b>Challenge:</b> Keeping standards consistent across fast-moving warehouse and cold chain operations.</p><p><b>What I did:</b> Built SOP audit scorecards, critical-point checks and cash reconciliation, with corrective actions.</p><p><b>Outcome:</b> 2nd rank pan-India for cold chain operations.</p></div>
+        <div class="k-card"><span class="k-tag">Retail</span><h4>Retail network performance</h4><p><b>Challenge:</b> Stores in the same network performing very differently.</p><p><b>What I did:</b> Analysed walk-ins, conversion, average bill value and catchment, backed by field observation and benchmarking.</p><p><b>Outcome:</b> Clear store-level actions and training priorities.</p></div>
+        <div class="k-card"><span class="k-tag">Audit &amp; Loss Prevention</span><h4>Invoice scrutiny and risk detection</h4><p><b>Challenge:</b> Losses hidden in high volumes of invoices and transactions.</p><p><b>What I did:</b> Set up invoice validation and exception detection, with evidence for every finding.</p><p><b>Outcome:</b> Risks found early and corrective actions tracked to closure.</p></div>
+      </div>
+
+      <h3 class="m-sub">My problem-solving toolkit</h3>
+      <div class="tk-grid">
+        <div class="tk-pill"><h4>Lean Six Sigma</h4><p>DMAIC, SIPOC, FMEA, root cause analysis, statistical analysis and control plans that keep improvements in place.</p></div>
+        <div class="tk-pill"><h4>Business Analysis</h4><p>Stakeholder needs, clear requirements, and options compared on impact, cost, risk and feasibility.</p></div>
+        <div class="tk-pill"><h4>Generative AI</h4><p>Faster research, analysis and automation, with AI workflows built where they add measurable value.</p></div>
+      </div>
+      <p class="m-quote">AI recommends. <span>People decide.</span></p>
+    </div>
+  </section>
+
   <section class="section" id="engage" style="background:#fff">
     <div class="wrap">
       <p class="eyebrow" style="color:#2F7A17">Engagements</p>
@@ -624,7 +683,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <h2>Practical playbooks for startups, SMEs and global operators</h2>
       <p class="lead">Start with the guides for founders and SME owners, then explore lessons from retail, food services, cold chain, e-commerce, manufacturing and business services.</p>
       <div class="slider i-slider" aria-roledescription="carousel" aria-label="Insights articles">
-        <div class="s-track"><a class="card s-slide" href="blog/from-1-to-1000-operations-playbook.html"><span class="ind">Startups & SMEs</span><h3>From 1 to 1,000: An Operations Playbook for Scaling a Startup</h3><p>Every startup breaks at predictable points as it grows. Knowing what changes at each stage lets founders fix things before they break.</p><span class="meta">7 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/bridging-business-and-tech.html"><span class="ind">Startups & SMEs</span><h3>Bridging Business and Tech: Product Requirements Your Developers Can Build</h3><p>Many startups burn months building the wrong features. The gap is rarely technical skill. It is the translation between how the business works and what the tech team is asked to build.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/sme-operations-health-check.html"><span class="ind">Startups & SMEs</span><h3>The SME Operations Health Check: 10 Questions to Ask Before You Scale</h3><p>Before you raise money, open a new location or enter a new market, ask these ten questions. The answers show whether your operations are ready to grow.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/cold-chain-is-a-promise.html"><span class="ind">Grocery & Cold Chain</span><h3>Cold Chain Is a Promise: What Online Grocery Gets Wrong</h3><p>Customers never see your cold chain. They only see whether the milk is cold and the vegetables are fresh. Here is how to keep that promise at scale.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/one-network-many-models.html"><span class="ind">E-commerce & Fulfillment</span><h3>One Network, Many Models: Fulfillment for D2C, B2C and B2B Across Borders</h3><p>Brands now sell direct, through marketplaces and to businesses at the same time. Fulfillment has to serve all three without building three separate operations.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/retail-operations-that-scale.html"><span class="ind">Retail</span><h3>Store Operations That Scale: Lessons From the Retail Floor</h3><p>Great retail operations look simple from the outside. Behind every calm store is a set of habits that work on the busiest day of the year, not just an average Tuesday.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/qsr-profitability-shift-by-shift.html"><span class="ind">Food Services & QSR</span><h3>QSR Profitability Is Built Shift by Shift</h3><p>In quick-service restaurants, the margin is won or lost in hundreds of small decisions every day. Here is where to look.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/purchase-discipline-in-manufacturing.html"><span class="ind">Manufacturing</span><h3>Purchase Discipline in Manufacturing: Where Profit Quietly Leaks</h3><p>In manufacturing, margin is often lost long before production starts, in purchasing, expenditure approvals and dealer settlements.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/back-office-as-a-growth-engine.html"><span class="ind">Business Services</span><h3>The Back Office as a Growth Engine for Small and Mid-Sized Businesses</h3><p>For growing companies, data, accounting and ERP work can either slow the business down or give it the clarity to scale. Outsourcing done right makes the difference.</p><span class="meta">5 min read &middot; November 2026</span></a></div>
+        <div class="s-track"><a class="card s-slide" href="blog/from-1-to-1000-operations-playbook.html"><span class="ind">Startups & SMEs</span><h3>From 1 to 1,000: An Operations Playbook for Scaling a Startup</h3><p>Every startup breaks at predictable points as it grows. Knowing what changes at each stage lets founders fix things before they break.</p><span class="meta">7 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/bridging-business-and-tech.html"><span class="ind">Startups & SMEs</span><h3>Bridging Business and Tech: Product Requirements Your Developers Can Build</h3><p>Many startups burn months building the wrong features. The gap is rarely technical skill. It is the translation between how the business works and what the tech team is asked to build.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/sme-operations-health-check.html"><span class="ind">Startups & SMEs</span><h3>The SME Operations Health Check: 10 Questions to Ask Before You Scale</h3><p>Before you raise money, open a new location or enter a new market, ask these ten questions. The answers show whether your operations are ready to grow.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/cold-chain-is-a-promise.html"><span class="ind">Grocery & Cold Chain</span><h3>Cold Chain Is a Promise: What Online Grocery Gets Wrong</h3><p>Customers never see your cold chain. They only see whether the milk is cold and the vegetables are fresh. Here is how to keep that promise at scale.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/one-network-many-models.html"><span class="ind">E-commerce & Fulfillment</span><h3>One Network, Many Models: Fulfillment for D2C, B2C and B2B Across Borders</h3><p>Brands now sell direct, through marketplaces and to businesses at the same time. Fulfillment has to serve all three without building three separate operations.</p><span class="meta">6 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/retail-operations-that-scale.html"><span class="ind">Retail</span><h3>Store Operations That Scale: Lessons From the Retail Floor</h3><p>Great retail operations look simple from the outside. Behind every calm store is a set of habits that work on the busiest day of the year, not just an average Tuesday.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/qsr-profitability-shift-by-shift.html"><span class="ind">Food Services & QSR</span><h3>QSR Profitability Is Built Shift by Shift</h3><p>In quick-service restaurants, the margin is won or lost in hundreds of small decisions every day. Here is where to look.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/purchase-discipline-in-manufacturing.html"><span class="ind">Manufacturing</span><h3>Purchase Discipline in Manufacturing: Where Profit Quietly Leaks</h3><p>In manufacturing, margin is often lost long before production starts, in purchasing, expenditure approvals and dealer settlements.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/back-office-as-a-growth-engine.html"><span class="ind">Business Services</span><h3>The Back Office as a Growth Engine for Small and Mid-Sized Businesses</h3><p>For growing companies, data, accounting and ERP work can either slow the business down or give it the clarity to scale. Outsourcing done right makes the difference.</p><span class="meta">5 min read &middot; November 2026</span></a><a class="card s-slide" href="blog/hotel-resort-purchasing-red-flags.html"><span class="ind">Hospitality</span><h3>15 Red Flags in Hotel and Resort Purchasing</h3><p>Most food and beverage cost leaks start long before the kitchen. They start in purchase orders, invoices and store transfers that nobody checks.</p><span class="meta">7 min read &middot; November 2026</span></a></div>
         <div class="s-ctrl"><button type="button" class="s-btn s-prev" aria-label="Previous article"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><div class="s-dots" role="group" aria-label="Choose slide"></div><button type="button" class="s-btn s-next" aria-label="Next article"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div>
       </div>
       <div class="dl-box">

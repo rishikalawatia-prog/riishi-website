@@ -374,6 +374,50 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 .m-quote span{color:#2F7A17}
 @media (max-width:1180px){.method .m-flow{grid-template-columns:repeat(3,1fr)}.m-flow li::after{display:none}.k-grid,.tk-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:640px){.method .m-flow,.k-grid,.tk-grid{grid-template-columns:1fr}}
+/* Spacing tightened */
+.section{padding:64px 0}
+.hero .wrap{padding-top:56px;padding-bottom:36px}
+.hero .wrap.stats-row{padding-bottom:48px}
+.ventures-strip{padding-bottom:40px}
+.e-grid,.v-grid,.b-grid,.x-grid,.t-grid,.b-slider,.t-slider{margin-top:32px}
+.c-grid,.i-grid,.i-slider{margin-top:28px}
+.method h3.m-sub{margin-top:44px}
+.method .m-flow{margin-top:28px}
+.section h2{margin-bottom:12px}
+.enquiry{margin-top:32px}
+/* Justified paragraphs */
+.m-flow span,.k-card p,.tk-pill p,.e-card li,.cert p,.c-card span,.dl-box span,.book p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+/* Highlight ticker */
+.ticker{background:#7CD65C;color:#0B1A3A;overflow:hidden;position:relative}
+.ticker .tk-track{display:flex;width:max-content;animation:tk 60s linear infinite}
+.ticker:hover .tk-track,.ticker:focus-within .tk-track{animation-play-state:paused}
+.ticker ul{display:flex;list-style:none;margin:0;padding:0}
+.ticker li{display:flex;align-items:center;white-space:nowrap;font-size:14px;font-weight:600;padding:10px 0}
+.ticker li::after{content:"\25CF";font-size:8px;margin:0 22px;opacity:.55}
+.ticker a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.ticker b{font-family:Montserrat,sans-serif;font-weight:800;margin-right:8px;text-transform:uppercase;font-size:12px;letter-spacing:1px;background:#0B1A3A;color:#7CD65C;padding:3px 8px;border-radius:4px}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker .tk-track{animation:none}.ticker{overflow-x:auto}}
+/* Industries runner */
+.ind-run{overflow:hidden;margin-top:36px;padding:6px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ind-run .tk-track{display:flex;width:max-content;animation:tk 45s linear infinite}
+.ind-run:hover .tk-track{animation-play-state:paused}
+.ind-run ul{display:flex;list-style:none;margin:0;padding:0 12px 0 0;gap:12px}
+.ind-run li{white-space:nowrap;font-family:Montserrat,sans-serif;font-weight:700;font-size:15px;color:var(--navy);background:#fff;border:1px solid #E3E8F2;border-radius:999px;padding:8px 16px}
+.ind-run li span{color:#2F7A17;margin-right:8px;font-size:10px;vertical-align:2px}
+@media (prefers-reduced-motion:reduce){.ind-run .tk-track{animation:none}}
+@media (max-width:768px){.section{padding:48px 0}.hero .wrap{padding-top:40px}.ticker li{font-size:13px}}
+@media (max-width:480px){.hero p.sub,.lead,.about-grid p{text-align:left;hyphens:manual}}
+@media (max-width:640px){.m-flow span,.k-card p,.tk-pill p,.e-card li,.cert p,.c-card span,.dl-box span,.book p{text-align:left;hyphens:manual}}
+
+.links-label{margin:auto 0 8px;padding-top:6px;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent)}
+.venture .links-label + .links{margin-top:0}
+.kindle-link{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.book .kbtn{margin-top:6px;min-height:42px;font-size:14px}
+.kstores{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;align-items:center}
+.kstores span{width:100%;font-size:13px;font-weight:600;color:var(--ink-muted)}
+.kstores a{font-size:12.5px;font-weight:600;color:var(--navy);background:#fff;border:1px solid #DCE3EF;border-radius:999px;padding:4px 10px;text-decoration:none}
+.kstores a:hover{border-color:#2F7A17;color:#2F7A17}
 </style>
 </head>
 <body>
@@ -405,6 +449,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
 </header>
 
 <main id="main">
+<div class="ticker" role="region" aria-label="Highlights"><div class="tk-track"><ul><li><b>Global</b>Working with businesses in India and Jamaica, open to engagements worldwide</li><li><b>Remote</b>Advisory across time zones, from IST to the Caribbean</li><li><b>New</b><a href="blog/hotel-resort-purchasing-red-flags.html">15 Red Flags in Hotel and Resort Purchasing</a></li><li><b>Kindle</b><a href="#books">Human Readiness in the AI &amp; SI Era, now on Amazon Kindle worldwide</a></li><li><b>Built</b>MVP websites: futureyou.global, skilligenhdi.com, aafinatech.com</li><li><b>Free</b><a href="assets/SME-Operations-Health-Check.pdf" target="_blank" rel="noopener">SME Operations Health Check (PDF)</a></li><li><b>Startups</b>Built teams from 1 to 1,000 employees</li><li><b>Award</b>2nd rank pan-India for cold chain operations</li><li><b>Consulting</b><a href="#engage">Post-AI business models through Aafina</a></li><li><b>25+ years</b>Retail, logistics, manufacturing, hospitality and food services</li></ul><ul aria-hidden="true"><li><b>Global</b>Working with businesses in India and Jamaica, open to engagements worldwide</li><li><b>Remote</b>Advisory across time zones, from IST to the Caribbean</li><li><b>New</b><a tabindex="-1" href="blog/hotel-resort-purchasing-red-flags.html">15 Red Flags in Hotel and Resort Purchasing</a></li><li><b>Kindle</b><a tabindex="-1" href="#books">Human Readiness in the AI &amp; SI Era, now on Amazon Kindle worldwide</a></li><li><b>Built</b>MVP websites: futureyou.global, skilligenhdi.com, aafinatech.com</li><li><b>Free</b><a tabindex="-1" href="assets/SME-Operations-Health-Check.pdf" target="_blank" rel="noopener">SME Operations Health Check (PDF)</a></li><li><b>Startups</b>Built teams from 1 to 1,000 employees</li><li><b>Award</b>2nd rank pan-India for cold chain operations</li><li><b>Consulting</b><a tabindex="-1" href="#engage">Post-AI business models through Aafina</a></li><li><b>25+ years</b>Retail, logistics, manufacturing, hospitality and food services</li></ul></div></div>
   <section class="hero" id="top">
     <div class="wrap">
       <div>
@@ -542,6 +587,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
         <div class="k-card"><span class="k-tag">Audit &amp; Loss Prevention</span><h4>Invoice scrutiny and risk detection</h4><p><b>Challenge:</b> Losses hidden in high volumes of invoices and transactions.</p><p><b>What I did:</b> Set up invoice validation and exception detection, with evidence for every finding.</p><p><b>Outcome:</b> Risks found early and corrective actions tracked to closure.</p></div>
       </div>
 
+      <div class="ind-run" role="region" aria-label="Industries served"><div class="tk-track"><ul><li><span>&#9679;</span>Retail</li><li><span>&#9679;</span>Food Services</li><li><span>&#9679;</span>Hospitality</li><li><span>&#9679;</span>Cold Chain</li><li><span>&#9679;</span>E-commerce</li><li><span>&#9679;</span>Logistics</li><li><span>&#9679;</span>Manufacturing</li><li><span>&#9679;</span>Agriculture</li><li><span>&#9679;</span>Business Services</li><li><span>&#9679;</span>Startups &amp; SMEs</li></ul><ul aria-hidden="true"><li><span>&#9679;</span>Retail</li><li><span>&#9679;</span>Food Services</li><li><span>&#9679;</span>Hospitality</li><li><span>&#9679;</span>Cold Chain</li><li><span>&#9679;</span>E-commerce</li><li><span>&#9679;</span>Logistics</li><li><span>&#9679;</span>Manufacturing</li><li><span>&#9679;</span>Agriculture</li><li><span>&#9679;</span>Business Services</li><li><span>&#9679;</span>Startups &amp; SMEs</li></ul></div></div>
       <h3 class="m-sub">My problem-solving toolkit</h3>
       <div class="tk-grid">
         <div class="tk-pill"><h4>Lean Six Sigma</h4><p>DMAIC, SIPOC, FMEA, root cause analysis, statistical analysis and control plans that keep improvements in place.</p></div>
@@ -591,8 +637,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
           <h3>Aafina Technologies and Consulting Services Private Limited</h3>
           <p class="since">Since October 2024 &middot; with Dr. Amanulla Khan</p>
           <p>Aafina works through two verticals. <strong>Technologies</strong> builds its own platforms and holds global solution partnerships and distribution rights. <strong>Consulting</strong> helps businesses re-engineer their models for the post-AI economy. I lead strategy, partnerships and licensing.</p>
-          <ul><li>FutureYou: Human Readiness platform for the AI era (MVP)</li><li>Skilligen&trade; HDI: Human Decision Infrastructure</li><li>Post-AI business model, distribution and direct/affiliate marketing design</li><li>Publishing: two books by Dr. Amanulla Khan</li></ul>
-          <div class="links"><a class="chip" href="https://aafinatech.com" target="_blank" rel="noopener">aafinatech.com</a><a class="chip" href="https://futureyou.global" target="_blank" rel="noopener">futureyou.global</a><a class="chip" href="https://skilligenhdi.com" target="_blank" rel="noopener">skilligenhdi.com</a></div>
+          <ul><li>FutureYou: Human Readiness platform for the AI era (MVP)</li><li>Skilligen&trade; HDI: Human Decision Infrastructure</li><li>Post-AI business model, distribution and direct/affiliate marketing design</li><li>Publishing: two books by Dr. Amanulla Khan. <a class="kindle-link" href="https://www.amazon.in/dp/B0HRB1FBRB" target="_blank" rel="noopener">Human Readiness in the AI &amp; SI Era is now on Amazon Kindle</a></li></ul>
+          <p class="links-label">MVP websites I developed</p><div class="links"><a class="chip" href="https://aafinatech.com" target="_blank" rel="noopener">aafinatech.com</a><a class="chip" href="https://futureyou.global" target="_blank" rel="noopener">futureyou.global</a><a class="chip" href="https://skilligenhdi.com" target="_blank" rel="noopener">skilligenhdi.com</a></div>
         </article>
         <article class="venture">
           <div class="logos"><img src="assets/garage-logo.png" alt="Garage" style="height:48px;width:auto"></div>
@@ -612,7 +658,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
       <h2>25 years, built on the ground</h2>
       <ol class="timeline">
         <li class="now"><p class="when">Jul 2026 &ndash; Present</p><h3>Global Head of Fulfillment <span>&middot; Garage</span></h3><p>Leading global fulfillment for a platform built for D2C, B2C, B2B and white-label commerce.</p></li>
-        <li class="now"><p class="when">Oct 2024 &ndash; Present</p><h3>Director <span>&middot; Aafina Technologies and Consulting Services Private Limited</span></h3><p>Technologies and Consulting verticals: FutureYou and Skilligen HDI platforms, global solution partnerships, post-AI business model and distribution consulting; publishing.</p></li>
+        <li class="now"><p class="when">Oct 2024 &ndash; Present</p><h3>Director <span>&middot; Aafina Technologies and Consulting Services Private Limited</span></h3><p>Technologies and Consulting verticals: FutureYou and Skilligen HDI platforms, global solution partnerships, post-AI business model and distribution consulting; publishing. Developed the MVP websites futureyou.global, skilligenhdi.com and aafinatech.com, and launched <em>Human Readiness in the AI &amp; SI Era</em> on Amazon Kindle.</p></li>
         <li class="now"><p class="when">Jan 2021 &ndash; Present</p><h3>Founder &amp; CEO <span>&middot; DBBS Group / Databrilliance</span></h3><p>Business services across India and Jamaica: data, accounting, analytics, ERP/CRM and operations.</p></li>
         <li><p class="when">Jan 2020 &ndash; Jul 2021</p><h3>Head of Operations <span>&middot; OTP Xpress</span></h3><p>Directed end-to-end business operations and logistics management, and worked closely with the CTO on product requirements and first user testing.</p></li>
         <li><p class="when">Aug 2018 &ndash; Nov 2019</p><h3>Store Head <span>&middot; bigbasket</span></h3><p>Warehouse operations, slot-based delivery TAT, order management and warehouse-level P&amp;L.</p><p class="award"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13L17 22l-5-3l-5 3l1.5-9"/></svg>Award: 2nd rank pan-India for cold chain operations</p></li>
@@ -633,10 +679,12 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
         <article class="book s-slide">
           <img src="assets/hr-kindle-cover.jpg" alt="Cover of Human Readiness in the AI &amp; SI Era by Dr. Amanulla Khan">
           <div>
-            <span class="tag">Now on Kindle</span>
+            <span class="tag">Now on Amazon Kindle</span>
             <h3 style="margin-top:10px">Human Readiness in the AI &amp; SI Era</h3>
             <p>FutureYou &amp; Human Decision Infrastructure. Are you ready?</p>
-            <p>By Dr. Amanulla Khan</p>
+            <p>By Dr. Amanulla Khan &middot; Published by Aafina</p>
+            <a class="btn primary kbtn" href="https://www.amazon.in/dp/B0HRB1FBRB" target="_blank" rel="noopener">Buy on Amazon Kindle</a>
+            <div class="kstores"><span>Choose your country&rsquo;s Kindle store:</span><a href="https://www.amazon.in/dp/B0HRB1FBRB" target="_blank" rel="noopener">India</a><a href="https://www.amazon.com/dp/B0HRB1FBRB" target="_blank" rel="noopener">USA</a><a href="https://www.amazon.co.uk/dp/B0HRB1FBRB" target="_blank" rel="noopener">UK</a><a href="https://www.amazon.ca/dp/B0HRB1FBRB" target="_blank" rel="noopener">Canada</a><a href="https://www.amazon.com.au/dp/B0HRB1FBRB" target="_blank" rel="noopener">Australia</a><a href="https://www.amazon.de/dp/B0HRB1FBRB" target="_blank" rel="noopener">Germany</a><a href="https://www.amazon.fr/dp/B0HRB1FBRB" target="_blank" rel="noopener">France</a><a href="https://www.amazon.es/dp/B0HRB1FBRB" target="_blank" rel="noopener">Spain</a><a href="https://www.amazon.it/dp/B0HRB1FBRB" target="_blank" rel="noopener">Italy</a><a href="https://www.amazon.nl/dp/B0HRB1FBRB" target="_blank" rel="noopener">Netherlands</a><a href="https://www.amazon.co.jp/dp/B0HRB1FBRB" target="_blank" rel="noopener">Japan</a><a href="https://www.amazon.com.br/dp/B0HRB1FBRB" target="_blank" rel="noopener">Brazil</a><a href="https://www.amazon.com.mx/dp/B0HRB1FBRB" target="_blank" rel="noopener">Mexico</a></div>
           </div>
         </article>
         <article class="book s-slide">
@@ -741,7 +789,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
           <div><b>LinkedIn</b><span>in/riishi-kalawatia</span></div>
         </a>
       </div>
-    </div>
     <div class="enquiry" id="enquiry">
         <div>
           <h3>Quick enquiry</h3>
@@ -769,6 +816,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-off
           </div>
         </form>
       </div>
+    </div>
     </section>
 </main>
 

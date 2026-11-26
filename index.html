@@ -434,6 +434,72 @@ a.orbit-label:hover{color:#fff}
 @keyframes hvdot{0%{box-shadow:0 0 0 0 rgba(124,214,92,.7)}70%{box-shadow:0 0 0 8px rgba(124,214,92,0)}100%{box-shadow:0 0 0 0 rgba(124,214,92,0)}}
 @media (max-width:480px){.orbit-label{font-size:10px;letter-spacing:.6px}a.orbit-label small{font-size:10px}.hv-badge{font-size:11.5px;padding:6px 12px}}
 @media (prefers-reduced-motion:reduce){.hero-visual .hv-spin,.hero-visual .hv-pulse,.hv-badge i{animation:none}}
+/* Cash flow section (preview) */
+.cf .cf-toggle{display:inline-flex;background:#E9EEF6;border-radius:999px;padding:5px;margin-top:28px}
+.cf-toggle button{border:0;background:transparent;font:600 15px Inter,sans-serif;color:var(--navy);padding:10px 22px;border-radius:999px;cursor:pointer}
+.cf-toggle button.on{background:var(--navy);color:#fff}
+.cf-board{display:grid;grid-template-columns:1.05fr 1fr;gap:22px;margin-top:22px}
+.cf-time{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px}
+.cf-time h3{font-size:20px;margin:0 0 22px;color:#fff}.cf-time h3 small{display:block;font:500 13px Inter,sans-serif;color:var(--muted);margin-top:6px}
+.cf-row{display:grid;grid-template-columns:130px 1fr 70px;align-items:center;gap:14px;margin-bottom:16px;font-size:14.5px}
+.cf-row .b{display:block;height:16px;border-radius:8px;transition:width .6s ease}
+.cf-row .stock{background:#F5C02E}.cf-row .sell{background:#4A6CF7}.cf-row .coll{background:#E8624A}
+.cf-row em{font-style:normal;font-weight:700;text-align:right}
+.cf-total{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:16px}
+.cf-total strong{font-family:Montserrat,sans-serif;font-size:30px;margin-left:8px}
+.cf-board[data-era=pre] .post,.cf-board[data-era=post] .pre{display:none}
+.cf-row .b{transition:width .6s ease,margin-left .6s ease}
+.cf-board[data-era=pre] .stock{width:36%;margin-left:0}.cf-board[data-era=pre] .sell{width:16%;margin-left:36%}.cf-board[data-era=pre] .coll{width:48%;margin-left:52%}
+.cf-board[data-era=post] .stock{width:9.6%;margin-left:0}.cf-board[data-era=post] .sell{width:5.6%;margin-left:9.6%}.cf-board[data-era=post] .coll{width:2.4%;margin-left:15.2%}
+.cf-row .trk{background:rgba(255,255,255,.08);border-radius:8px;height:16px;display:block}
+.cf .m-sub{font-size:22px;font-weight:800;margin:48px 0 6px}
+.cf .cf-card p{text-align:left !important;hyphens:manual !important}
+
+.cf-board[data-era=pre] .cf-total strong{color:#E8624A}.cf-board[data-era=post] .cf-total strong{color:#7CD65C}
+.cf-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf-card{background:#fff;border:1px solid #E3E8F2;border-radius:var(--radius);padding:20px}
+.cf-card h4{font-family:Montserrat,sans-serif;font-size:16px;margin:0 0 8px;color:var(--navy)}
+.cf-card p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-muted);text-align:justify;hyphens:auto}
+.cf-board[data-era=post] .cf-card{border-color:#BFE6B0;background:#F6FCF3}
+.cf-models{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:24px}
+.cf-model{background:#fff;border:1px solid #E3E8F2;border-radius:var(--radius);padding:20px;display:flex;flex-direction:column}
+.cf-model h4{font-family:Montserrat,sans-serif;font-size:15.5px;margin:10px 0 8px;color:var(--navy)}
+.cf-model p{font-size:14px;line-height:1.5;color:var(--ink-muted);margin:0 0 12px;flex:1}
+.cf-model b{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--navy)}
+.cf-dot{width:12px;height:12px;border-radius:50%}.cf-dot.g{background:#2F9E44}.cf-dot.a{background:#F5A524}.cf-dot.r{background:#E8624A}
+.cf-cta{margin-top:30px;background:#EEF8E9;border:1px solid #BFE6B0;border-radius:var(--radius);padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cf-cta h4{font-family:Montserrat,sans-serif;font-size:19px;margin:0 0 6px;color:var(--navy)}.cf-cta p{margin:0;color:var(--ink-muted)}
+@media (max-width:1180px){.cf-board{grid-template-columns:1fr}.cf-models{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:640px){.cf-cards,.cf-models{grid-template-columns:1fr}.cf-row{grid-template-columns:100px 1fr 60px}.cf-cta{flex-direction:column;align-items:flex-start}}
+/* Fulfillment section (preview) */
+.ff-legend{display:flex;gap:22px;margin-top:26px;font-size:14px;color:var(--ink-muted)}
+.ff-legend span{display:flex;align-items:center;gap:8px}.ff-legend i{width:14px;height:14px;border-radius:4px}
+.ff-legend i.o,.ff-flow li.o::before{background:var(--navy)}.ff-legend i.p,.ff-flow li.p::before{background:#2F9E8F}
+.ff-flow{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:f}
+.ff-flow li{position:relative;background:#F7F9FC;border:1px solid #E3E8F2;border-radius:var(--radius);padding:18px 16px;counter-increment:f}
+.ff-flow li::before{content:counter(f);display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;color:#fff;font:800 15px Montserrat,sans-serif;margin-bottom:12px}
+.ff-flow li:not(:last-child)::after{content:"";position:absolute;right:-10px;top:34px;width:8px;height:8px;border-top:2px solid #8A97B0;border-right:2px solid #8A97B0;transform:rotate(45deg);z-index:1}
+.ff-flow b{display:block;font-family:Montserrat,sans-serif;font-size:15px;color:var(--navy);margin-bottom:6px}
+.ff-flow span{font-size:13.5px;line-height:1.45;color:var(--ink-muted)}
+.ff .m-sub{font-size:22px;font-weight:800;margin:48px 0 6px}
+.ff-lanes{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:stretch;margin-top:20px}
+.ff-lane{background:#EAF5F3;border:1px solid #BFE0DA;border-radius:var(--radius);padding:22px}
+.ff-lane em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#1F7A6E}
+.ff-lane h4{font-family:Montserrat,sans-serif;font-size:17px;margin:8px 0;color:var(--navy)}.ff-lane p{margin:0;font-size:14.5px;line-height:1.5;color:var(--ink-muted)}
+.ff-arrow{display:flex;align-items:center;justify-content:center;font-size:26px;color:#1F7A6E}
+.ff-loop{margin:14px 0 0;font-weight:600;color:#1F7A6E}
+.ff-ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px;align-items:end}
+.ff-step{background:#fff;border:1px solid #E3E8F2;border-radius:var(--radius);padding:18px;display:flex;flex-direction:column}
+.ff-step:nth-child(1){min-height:200px}.ff-step:nth-child(2){min-height:220px}.ff-step:nth-child(3){min-height:240px}.ff-step:nth-child(4){min-height:260px}.ff-step:nth-child(5){min-height:280px}
+.ff-step b{font:800 26px Montserrat,sans-serif;color:#7CD65C}.ff-step h4{font-family:Montserrat,sans-serif;font-size:15.5px;margin:6px 0;color:var(--navy)}
+.ff-step p{margin:0 0 12px;font-size:13.5px;line-height:1.45;color:var(--ink-muted);flex:1}
+.ff-step span{font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;border-radius:999px;padding:5px 10px;align-self:flex-start}
+.ff-step .now{background:#EEF8E9;color:#2F7A17}.ff-step .later{background:#FFF3E0;color:#A85A00}
+.ff-rule{margin:16px 0 0;padding:14px 18px;background:#F7F9FC;border-left:4px solid var(--navy);border-radius:6px;color:var(--ink)}
+.ff-kpis{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ff-kpis span{background:var(--navy);color:#fff;font-size:13.5px;font-weight:600;border-radius:999px;padding:8px 14px}
+@media (max-width:1180px){.ff-flow{grid-template-columns:repeat(3,1fr)}.ff-flow li::after{display:none}.ff-ladder{grid-template-columns:repeat(3,1fr)}.ff-step{min-height:0!important}}
+@media (max-width:640px){.ff-flow,.ff-ladder{grid-template-columns:1fr}.ff-lanes{grid-template-columns:1fr}.ff-arrow{transform:rotate(90deg);height:36px}}
 </style>
 </head>
 <body>
@@ -612,6 +678,95 @@ a.orbit-label:hover{color:#fff}
         <div class="tk-pill"><h4>Generative AI</h4><p>Faster research, analysis and automation, with AI workflows built where they add measurable value.</p></div>
       </div>
       <p class="m-quote">AI recommends. <span>People decide.</span></p>
+    </div>
+  </section>
+
+  <section class="section ff" id="fulfillment" style="background:#fff">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#2F7A17">White-Label Aggregator Fulfillment</p>
+      <h2>Fulfillment that scales without owning a warehouse</h2>
+      <p class="lead">The brand governs, partners execute. A white-label aggregator model delivers every order as one branded parcel, while warehousing, couriers and returns run through contracted partners, managed against clear SLAs.</p>
+
+      <div class="ff-legend"><span><i class="o"></i>Brand-owned step</span><span><i class="p"></i>Partner-run step</span></div>
+      <ol class="ff-flow">
+        <li class="o"><b>Supplier qualification</b><span>Due diligence, two partners per category, sample orders before listing</span></li>
+        <li class="p"><b>Inbound pickup</b><span>Supplier to fulfillment centre, carrier chosen by geography and cost</span></li>
+        <li class="p"><b>QC &amp; white-label repack</b><span>Quality gate, then one branded parcel, whatever the source</span></li>
+        <li class="o"><b>Order routing</b><span>Each prepaid order routed by product tier and region, with automatic failover</span></li>
+        <li class="p"><b>Last-mile delivery</b><span>At least two couriers per region, tracked on time and in full</span></li>
+        <li class="o"><b>Returns &amp; refunds</b><span>One returns policy across every partner, with defect costs recovered</span></li>
+      </ol>
+
+      <h3 class="m-sub">Three lanes: test, scale, expand</h3>
+      <div class="ff-lanes">
+        <div class="ff-lane"><em>Lane A · Test</em><h4>Catalog partner</h4><p>New and long-tail products shipped by partners. No inventory risk while demand is proven.</p></div>
+        <div class="ff-arrow" aria-hidden="true">→</div>
+        <div class="ff-lane"><em>Lane B · Scale</em><h4>Partner fulfillment centre</h4><p>Proven bestsellers move in. Full QC and branded repack, with inventory accuracy above 99%.</p></div>
+        <div class="ff-arrow" aria-hidden="true">→</div>
+        <div class="ff-lane"><em>Lane C · Expand</em><h4>International 3PL</h4><p>New countries served through a branded partner until volume justifies a local centre.</p></div>
+      </div>
+      <p class="ff-loop">↻ A monthly performance review moves winners up a lane and replaces weak partners with their backup.</p>
+
+      <h3 class="m-sub">From cost centre to revenue line</h3>
+      <div class="ff-ladder">
+        <div class="ff-step"><b>1</b><h4>Managed shipping</h4><p>One account for pickup, courier allocation, tracking and remittance</p><span class="now">No warehouse needed</span></div>
+        <div class="ff-step"><b>2</b><h4>Failed delivery &amp; returns</h4><p>Reattempts, return-to-origin tracking and reverse pickup to refund</p><span class="now">No warehouse needed</span></div>
+        <div class="ff-step"><b>3</b><h4>Visibility &amp; reporting</h4><p>Stuck orders, return rates by area and courier, settlement reconciliation</p><span class="now">No warehouse needed</span></div>
+        <div class="ff-step"><b>4</b><h4>QC &amp; white-label packing</h4><p>Goods checked and repackaged under the seller's own brand</p><span class="later">Needs a warehouse</span></div>
+        <div class="ff-step"><b>5</b><h4>Warehousing &amp; fulfillment</h4><p>Stock held, picked, packed and shipped for every order</p><span class="later">Needs a warehouse</span></div>
+      </div>
+      <p class="ff-rule"><b>The rule:</b> each phase is funded by the one before it. No warehouse lease until paying sellers exist, and no direct carrier contracts until volume earns better rates.</p>
+
+      <div class="ff-kpis"><span>Inventory accuracy &gt;99%</span><span>On time, in full (OTIF)</span><span>Dispatch SLA</span><span>Return rate by area &amp; courier</span><span>Prepaid orders: cash before cost</span></div>
+
+      <div class="cf-cta">
+        <div><h4>Planning a D2C, B2B or white-label fulfillment network?</h4><p>Model design, partner selection, SLAs and the phase plan, built on hands-on fulfillment experience.</p></div>
+        <a class="btn primary" href="#enquiry">Plan your fulfillment model</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cf" id="cashflow">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#2F7A17">Cash Flow Business Models</p>
+      <h2>From the pre-AI era to the post-AI era</h2>
+      <p class="lead">Profit is an opinion. Cash is a fact. AI is changing how fast cash moves through a business, and which business models win because of it.</p>
+
+      <div class="cf-toggle" role="tablist" aria-label="Choose era">
+        <button class="on" data-era="pre" role="tab" aria-selected="true">Pre-AI era</button>
+        <button data-era="post" role="tab" aria-selected="false">Post-AI era</button>
+      </div>
+
+      <div class="cf-board" data-era="pre">
+        <div class="cf-time">
+          <h3>The cash cycle <small>Illustrative example: days from paying a supplier to collecting from a customer</small></h3>
+          <div class="cf-row"><span>Buy &amp; stock</span><span class="trk"><i class="b stock"></i></span><em class="pre">45 days</em><em class="post">12 days</em></div>
+          <div class="cf-row"><span>Sell</span><span class="trk"><i class="b sell"></i></span><em class="pre">20 days</em><em class="post">7 days</em></div>
+          <div class="cf-row"><span>Collect payment</span><span class="trk"><i class="b coll"></i></span><em class="pre">60 days</em><em class="post">2 days</em></div>
+          <div class="cf-total"><b>Cash locked in the business:</b> <strong class="pre">125 days</strong><strong class="post">21 days</strong></div>
+        </div>
+
+        <div class="cf-cards">
+          <div class="cf-card"><h4>Forecasting</h4><p class="pre">Monthly plans based on last year and gut feel. Stock buffers cover the uncertainty.</p><p class="post">Daily demand signals from orders, bookings and search. Stock follows demand, not guesses.</p></div>
+          <div class="cf-card"><h4>Distribution</h4><p class="pre">Distributor → wholesaler → retailer, each layer on 30 to 90 days of credit.</p><p class="post">Direct, affiliate and community channels, with customers paying upfront or on delivery.</p></div>
+          <div class="cf-card"><h4>Collections</h4><p class="pre">Invoices chased by phone. Receivables reviewed at month-end.</p><p class="post">Digital payments, automated reminders and same-day reconciliation.</p></div>
+          <div class="cf-card"><h4>Cost base</h4><p class="pre">Fixed costs grow with every new location, team and manual process.</p><p class="post">AI absorbs routine work, so costs grow slower than revenue.</p></div>
+        </div>
+      </div>
+
+      <h3 class="m-sub">Business models that turn cash faster</h3>
+      <div class="cf-models">
+        <div class="cf-model"><span class="cf-dot g"></span><h4>Prepaid &amp; subscription</h4><p>Customers pay before the cost is incurred. Recurring cash, predictable planning.</p><b>Cash before cost</b></div>
+        <div class="cf-model"><span class="cf-dot g"></span><h4>Direct &amp; affiliate distribution</h4><p>Fewer layers between product and customer. Partners earn on sales, not on credit.</p><b>Cash before cost</b></div>
+        <div class="cf-model"><span class="cf-dot a"></span><h4>Marketplace &amp; platform</h4><p>Commission on transactions. Little stock, and cash collected before sellers are paid.</p><b>Cash with sale</b></div>
+        <div class="cf-model"><span class="cf-dot a"></span><h4>Asset-light fulfillment</h4><p>Shared warehouses and delivery networks instead of owned infrastructure.</p><b>Cash with sale</b></div>
+        <div class="cf-model"><span class="cf-dot r"></span><h4>Traditional credit trade</h4><p>Stock first, sell on credit, collect later. Growth consumes cash.</p><b>Cost before cash</b></div>
+      </div>
+
+      <div class="cf-cta">
+        <div><h4>Is your business model built for cash flow?</h4><p>A structured review of your cash cycle, distribution and collections, with a post-AI redesign plan.</p></div>
+        <a class="btn primary" href="#enquiry">Request a cash flow review</a>
+      </div>
     </div>
   </section>
 
@@ -1008,5 +1163,6 @@ initSliders();
   });
 })();
 </script>
+<script>document.querySelectorAll('.cf-toggle button').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode;t.querySelectorAll('button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');document.querySelector('.cf-board').setAttribute('data-era',b.dataset.era)})});</script>
 </body>
 </html>

@@ -540,6 +540,48 @@ a.orbit-label:hover{color:#fff}
 .rc-brief{white-space:pre-wrap;background:#0B1A3A;color:#E6ECF7;border-radius:12px;padding:12px;font:12.5px/1.55 ui-monospace,Menlo,Consolas,monospace;margin:0}
 @media (max-width:640px){.rc-launch .rc-lt small{display:none}.rc-panel{right:12px;bottom:12px;height:calc(100vh - 24px);max-height:none}}
 .book-line{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:18px 0 0}.book-direct{font-weight:600}
+/* Signature frameworks */
+.sig{background:#fff}
+.sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.sig-card{display:flex;flex-direction:column;background:var(--navy);color:#fff;border-radius:var(--radius);padding:26px;text-decoration:none;transition:transform .2s}
+.sig-card:hover{transform:translateY(-3px)}
+.sig-n{font:800 15px Montserrat,sans-serif;color:#7CD65C;letter-spacing:1px}
+.sig-card h3{font-family:Montserrat,sans-serif;font-size:21px;margin:10px 0;color:#fff}
+.sig-card p{margin:0 0 16px;font-size:15px;line-height:1.55;color:#C9D3E6;flex:1;text-align:left!important}
+.sig-go{font-weight:700;color:#7CD65C;font-size:14px}
+/* Ways to work together */
+.ways-h{font-size:22px;font-weight:800;margin:48px 0 0}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px;align-items:stretch}
+.way{display:flex;flex-direction:column;border:1px solid #E3E8F2;border-radius:var(--radius);padding:26px;background:#fff}
+.way.feat{border:2px solid #7CD65C;box-shadow:0 14px 30px rgba(11,26,58,.08)}
+.way-tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;background:#EEF8E9;color:#2F7A17;border-radius:999px;padding:5px 11px}
+.way h4{font-family:Montserrat,sans-serif;font-size:20px;margin:12px 0 8px;color:var(--navy)}
+.way .way-d{margin:0 0 14px;font-size:15px;line-height:1.55;color:var(--ink-muted);text-align:left!important}
+.way ul{margin:0 0 20px;padding-left:18px;color:var(--ink);font-size:14.5px;line-height:1.8;flex:1}
+.way .btn{align-self:flex-start}
+.btn.ghost{background:transparent;border:2px solid var(--navy);color:var(--navy)}
+.ways-note{margin:14px 0 0;color:var(--ink-muted);font-size:14px}
+/* Speaking */
+.speak{background:var(--navy);color:#fff}
+.speak h2{color:#fff}.speak .eyebrow{color:#7CD65C}.speak .lead{color:#C9D3E6}
+.sp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+.sp-topic{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:22px}
+.sp-topic span{font-size:12px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#7CD65C}
+.sp-topic h3{font-family:Montserrat,sans-serif;font-size:18px;margin:8px 0;color:#fff}
+.sp-topic p{margin:0;font-size:14.5px;line-height:1.55;color:#C9D3E6;text-align:left!important}
+.sp-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.sp-meta div{border-top:2px solid #7CD65C;padding-top:12px}
+.sp-meta b{display:block;font-family:Montserrat,sans-serif;font-size:15px;margin-bottom:6px}
+.sp-meta span{font-size:14px;line-height:1.6;color:#C9D3E6}
+.sp-btn{margin-top:28px}
+@media (max-width:1180px){.sig-grid,.ways{grid-template-columns:1fr 1fr}.sp-meta{grid-template-columns:1fr}}
+@media (max-width:640px){.sig-grid,.ways,.sp-grid{grid-template-columns:1fr}}
+.sp-band{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.sp-intro .btn{margin-top:10px}
+.sp-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.sp-list li{display:flex;gap:14px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:16px 18px;font:700 16px Montserrat,sans-serif;color:#fff}
+.sp-list span{color:#7CD65C;font-size:14px}
+@media (max-width:900px){.sp-band{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -685,9 +727,22 @@ a.orbit-label:hover{color:#fff}
     </div>
   </section>
 
+  <section class="section sig" id="frameworks">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#2F7A17">Signature Frameworks</p>
+      <h2>Three ideas behind every engagement</h2>
+      <p class="lead">Simple, named frameworks built from 25 years of experience on the ground, applied across retail, logistics, manufacturing, hospitality and startups.</p>
+      <div class="sig-grid">
+        <a class="sig-card" href="#method"><span class="sig-n">01</span><h3>The Operations Control Loop</h3><p>Transaction → Control → Validation → Exception → Insight → Improvement. Every problem traced from where it starts to the fix that makes it stick.</p><span class="sig-go">See the method →</span></a>
+        <a class="sig-card" href="#fulfillment"><span class="sig-n">02</span><h3>Govern, Don&rsquo;t Operate</h3><p>The brand sets the standards; partners run the warehouses, couriers and returns. Asset-light fulfillment that scales without owning a warehouse.</p><span class="sig-go">See the model →</span></a>
+        <a class="sig-card" href="#cashflow"><span class="sig-n">03</span><h3>Cash Before Cost</h3><p>Business models where customers pay before costs are incurred. How AI shortens the cash cycle, and which models win because of it.</p><span class="sig-go">See the models →</span></a>
+      </div>
+    </div>
+  </section>
+
   <section class="section method" id="method">
     <div class="wrap">
-      <p class="eyebrow" style="color:#2F7A17">The Method</p>
+      <p class="eyebrow" style="color:#2F7A17">Signature Framework 01 · The Operations Control Loop</p>
       <h2>A proven way to solve operational problems</h2>
       <p class="lead">Different industries, same discipline, backed by experience in each. Every problem is traced from the transaction where it starts to the improvement that fixes it for good.</p>
       <ol class="m-flow" aria-label="Problem-solving method">
@@ -723,7 +778,7 @@ a.orbit-label:hover{color:#fff}
 
   <section class="section ff" id="fulfillment" style="background:#fff">
     <div class="wrap">
-      <p class="eyebrow" style="color:#2F7A17">White-Label Aggregator Fulfillment</p>
+      <p class="eyebrow" style="color:#2F7A17">Signature Framework 02 · Govern, Don&rsquo;t Operate</p>
       <h2>Fulfillment that scales without owning a warehouse</h2>
       <p class="lead">The brand governs, partners execute. A white-label aggregator model delivers every order as one branded parcel, while warehousing, couriers and returns run through contracted partners, managed against clear SLAs.</p>
 
@@ -768,7 +823,7 @@ a.orbit-label:hover{color:#fff}
 
   <section class="section cf" id="cashflow">
     <div class="wrap">
-      <p class="eyebrow" style="color:#2F7A17">Cash Flow Business Models</p>
+      <p class="eyebrow" style="color:#2F7A17">Signature Framework 03 · Cash Before Cost</p>
       <h2>From the pre-AI era to the post-AI era</h2>
       <p class="lead">Profit is an opinion. Cash is a fact. AI is changing how fast cash moves through a business, and which business models win because of it.</p>
 
@@ -822,6 +877,13 @@ a.orbit-label:hover{color:#fff}
         <div class="e-card"><h3>Post-AI Business Models</h3><ul><li>Business model re-engineering for the post-AI economy</li><li>Direct &amp; affiliate marketing models, national to global</li><li>Distribution models built for cash flow</li><li>Wellness business development</li></ul><p class="e-via">Through Aafina Technologies &amp; Consulting</p></div>
         <div class="e-card"><h3>Startups &amp; SMEs</h3><ul><li>Scaling teams from 1 to 1,000</li><li>Product requirements &amp; user testing</li><li>SOPs, data, accounting &amp; ERP/CRM</li></ul></div>
       </div>
+      <h3 class="ways-h">Ways to work together</h3>
+      <div class="ways">
+        <div class="way"><span class="way-tag">Advise</span><h4>Review &amp; direction</h4><p class="way-d">An Operations Health Check or a strategy session: a clear view of what is working, what is not, and what to fix first.</p><ul><li>Health check or strategy session</li><li>Findings and a 90-day action plan</li><li>On-site or remote</li></ul><a class="btn ghost" href="#enquiry" data-topic="Startup / SME scaling &amp; health check">Request a review</a></div>
+        <div class="way feat"><span class="way-tag">Build</span><h4>Design &amp; launch</h4><p class="way-d">Design and roll-out of a new model or process: fulfillment network, distribution or cash-flow model, SOPs and controls.</p><ul><li>Blueprint, partners and SLAs</li><li>Launch plan and KPIs</li><li>Through DBBS or Aafina</li></ul><a class="btn primary" href="#enquiry" data-topic="E-commerce &amp; fulfillment">Plan a project</a></div>
+        <div class="way"><span class="way-tag">Run</span><h4>Ongoing leadership</h4><p class="way-d">Senior operations leadership as a fractional COO, for founders and growing businesses that need it without a full-time hire.</p><ul><li>Systems, teams, KPIs and execution</li><li>Monthly, agreed days</li><li>India, Middle East, Caribbean or remote</li></ul><a class="btn ghost" href="#enquiry" data-topic="Operations consulting">Discuss a fractional role</a></div>
+      </div>
+      <p class="ways-note">Fees are shared after a short first call, once scope is clear.</p>
     </div>
   </section>
 
@@ -878,6 +940,18 @@ a.orbit-label:hover{color:#fff}
         <li><p class="when">May 2012 &ndash; Dec 2014</p><h3>Operations Head <span>&middot; Sorbet</span></h3><p>Team building, P&amp;L and business operations for a gourmet food retailer.</p></li>
         <li><p class="when">Nov 2003 &ndash; Jan 2012</p><h3>Assistant Unit Business Head <span>&middot; Jubilant FoodWorks</span></h3><p>Drove profitability, marketing planning and large retail teams across channels.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="section speak" id="speaking">
+    <div class="wrap sp-band">
+      <div class="sp-intro"><p class="eyebrow">Speaking</p><h2>Talks that turn operations into growth</h2><p class="lead">Keynotes, workshops and panels for founders, leadership teams, associations and colleges, in person or online.</p><a class="btn primary" href="#enquiry" data-topic="Speaking or partnership">Book Riishi to speak</a></div>
+      <ul class="sp-list">
+        <li><span>01</span>From 1 to 1,000: Scaling Operations Without Losing Control</li>
+        <li><span>02</span>Cash Before Cost: Business Models for the Post-AI Era</li>
+        <li><span>03</span>Govern, Don&rsquo;t Operate: Asset-Light Fulfillment</li>
+        <li><span>04</span>Human Readiness at Work: Decisions in the AI Era</li>
+      </ul>
     </div>
   </section>
 

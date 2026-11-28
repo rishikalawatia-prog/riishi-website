@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var BOOKING_URL = ''; // Calendly link goes here once available
+  var BOOKING_URL = 'https://calendly.com/riishi14-kalawatia/30min';
   var SEND_ENDPOINT = 'https://formspree.io/f/mgakbyyb'; // Formspree endpoint goes here once available
 
   var TOPICS = [
@@ -248,7 +248,7 @@
       clearArea();
       var row = el('div', 'rc-actions');
       var book = el('a', 'rc-send', 'Book a call with Riishi');
-      if (BOOKING_URL) { book.href = BOOKING_URL; book.target = '_blank'; book.rel = 'noopener'; }
+      if (BOOKING_URL) { book.href = BOOKING_URL + '?name=' + encodeURIComponent(state.profile.name) + '&email=' + encodeURIComponent(state.profile.email) + '&a1=' + encodeURIComponent('Topic: ' + state.topic.label + ' (pre-call chat completed)'); book.target = '_blank'; book.rel = 'noopener'; }
       else { book.href = '#enquiry'; book.onclick = function () { close(); }; }
       var wa = el('a', 'rc-ghost', 'Continue on WhatsApp');
       wa.href = 'https://wa.me/918951409744?text=' + encodeURIComponent('Hi Riishi, I just completed the pre-call chat on your website (' + state.topic.label + '). ' + state.profile.name);

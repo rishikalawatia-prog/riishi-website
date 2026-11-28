@@ -1215,6 +1215,6 @@ initSliders();
 </script>
 <script>document.querySelectorAll('.cf-toggle button').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode;t.querySelectorAll('button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');document.querySelector('.cf-board').setAttribute('data-era',b.dataset.era)})});</script>
 <script>document.querySelectorAll('a[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('f-topic');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-topic')){s.selectedIndex=i;break;}}});});</script>
-<script src="assets/riishi-chat.js" defer></script>
+<script src="assets/riishi-chat.js?v=2" defer></script>
 </body>
 </html>

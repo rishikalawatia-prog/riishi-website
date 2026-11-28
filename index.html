@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (Google Analytics) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W8NC8R8W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riishi Kalawatia – Operations &amp; Strategy Leader</title>
@@ -1263,7 +1270,7 @@ initSliders();
     d.append('_subject','Website enquiry: '+document.getElementById('f-topic').value+' \u2013 '+document.getElementById('f-name').value.trim());
     fetch('https://formspree.io/f/mgakbyyb',{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){
       if(!r.ok) throw new Error('send');
-      f.reset(); btn.textContent='Sent'; note.textContent='Thank you. Your message has reached Riishi, who will reply within one working day.';
+      f.reset(); btn.textContent='Sent'; if(window.gtag) gtag('event','generate_lead',{method:'enquiry_form'}); note.textContent='Thank you. Your message has reached Riishi, who will reply within one working day.';
     }).catch(function(){
       btn.disabled=false; btn.textContent='Send message';
       note.innerHTML='Sorry, the message could not be sent. Please email <a href="mailto:riishi14.kalawatia@gmail.com">riishi14.kalawatia@gmail.com</a> or use WhatsApp.';
@@ -1289,6 +1296,6 @@ initSliders();
 </script>
 <script>document.querySelectorAll('.cf-toggle button').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode;t.querySelectorAll('button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');document.querySelector('.cf-board').setAttribute('data-era',b.dataset.era)})});</script>
 <script>document.querySelectorAll('a[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('f-topic');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-topic')){s.selectedIndex=i;break;}}});});</script>
-<script src="assets/riishi-chat.js?v=2" defer></script>
+<script src="assets/riishi-chat.js?v=3" defer></script>
 </body>
 </html>

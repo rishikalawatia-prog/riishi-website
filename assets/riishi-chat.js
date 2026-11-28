@@ -241,6 +241,7 @@
   function finish() {
     var text = brief();
     state.briefText = text;
+    if (window.gtag) gtag('event', 'generate_lead', { method: 'pre_call_assistant', topic: state.topic.label });
     if (SEND_ENDPOINT) {
       fetch(SEND_ENDPOINT, { method: 'POST', headers: { 'Accept': 'application/json' }, body: (function () { var d = new FormData(); d.append('email', state.profile.email); d.append('name', state.profile.name); d.append('_subject', 'Pre-call brief: ' + state.profile.name + ' – ' + state.topic.label); d.append('message', text); return d; })() }).catch(function () {});
     }

@@ -504,6 +504,41 @@ a.orbit-label:hover{color:#fff}
 
 /* Ticker kept inside the page frame: starts at the logo, ends at the menu */
 .ticker .tk-frame{width:calc(100% - 48px);max-width:calc(var(--max) - 48px);margin:0 auto;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 14px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 14px),transparent 100%)}
+/* Riishi's AI assistant (guided chat) */
+.rc-launch{position:fixed;right:20px;bottom:88px;z-index:61;display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border:2px solid #7CD65C;border-radius:999px;padding:7px 16px 7px 7px;box-shadow:0 12px 28px rgba(0,0,0,.3);cursor:pointer;font-family:Inter,sans-serif;text-align:left}
+.rc-launch .rc-lt{display:flex;flex-direction:column;line-height:1.2}.rc-launch b{font-size:14px}.rc-launch small{font-size:12px;color:#C9D3E6}
+.rc-av{width:38px;height:38px;border-radius:50%;background:#7CD65C;color:var(--navy);display:grid;place-items:center;font:800 17px Montserrat,sans-serif;flex:none}
+.rc-panel{position:fixed;right:20px;bottom:88px;z-index:62;width:380px;max-width:calc(100vw - 24px);height:600px;max-height:calc(100vh - 110px);background:#F6F8FC;border-radius:16px;box-shadow:0 24px 60px rgba(11,26,58,.35);display:none;flex-direction:column;overflow:hidden;font-family:Inter,sans-serif}
+.rc-panel.open{display:flex}
+.rc-panel.open~.rc-launch{display:none}
+.rc-head{display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;padding:12px 14px}
+.rc-head div{flex:1;display:flex;flex-direction:column}.rc-head b{font-size:15px}.rc-head small{font-size:12px;color:#C9D3E6}
+.rc-x{background:transparent;border:0;color:#fff;font-size:26px;line-height:1;cursor:pointer;width:40px;height:40px}
+.rc-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:8px}
+.rc-msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:14.5px;line-height:1.5}
+.rc-bot{background:#fff;border:1px solid #E3E8F2;color:var(--ink);align-self:flex-start;border-bottom-left-radius:4px}
+.rc-me{background:var(--navy);color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.rc-small{font-size:13px;color:#5B6B85}
+.rc-typing{display:flex;gap:4px;padding:13px}.rc-typing span{width:7px;height:7px;border-radius:50%;background:#9AA8C0;animation:rcb 1s infinite}.rc-typing span:nth-child(2){animation-delay:.15s}.rc-typing span:nth-child(3){animation-delay:.3s}
+@keyframes rcb{0%,60%,100%{opacity:.3}30%{opacity:1}}
+.rc-card{display:flex;flex-direction:column;gap:2px}.rc-card span{font-size:11.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#2F7A17;margin-top:6px}.rc-card b{font-family:Montserrat,sans-serif;color:var(--navy)}.rc-card p{margin:0}
+.rc-prep{margin:6px 0 0;padding-left:18px}
+.rc-area{padding:12px 14px;border-top:1px solid #E3E8F2;background:#fff;display:flex;flex-direction:column;gap:8px;max-height:52%;overflow-y:auto}
+.rc-chips{display:flex;flex-wrap:wrap;gap:7px}
+.rc-chip{border:1.5px solid var(--navy);background:#fff;color:var(--navy);border-radius:999px;padding:8px 13px;font:600 13.5px Inter,sans-serif;cursor:pointer;min-height:38px}
+.rc-chip:hover,.rc-chip.on{background:var(--navy);color:#fff}
+.rc-hint{font-size:12px;color:#5B6B85}
+.rc-send{align-self:flex-start;background:#7CD65C;color:var(--navy);border:0;border-radius:10px;padding:10px 16px;font:700 14px Inter,sans-serif;cursor:pointer;text-decoration:none;min-height:42px;display:inline-flex;align-items:center}
+.rc-send:disabled{opacity:.45;cursor:not-allowed}
+.rc-ghost{border:2px solid var(--navy);color:var(--navy);border-radius:10px;padding:8px 14px;font:700 14px Inter,sans-serif;text-decoration:none}
+.rc-link{background:none;border:0;color:#2F7A17;font:600 13.5px Inter,sans-serif;text-decoration:underline;cursor:pointer;padding:4px 0;text-align:left}
+.rc-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.rc-text{display:flex;gap:8px}.rc-text input{flex:1}
+.rc-form{display:grid;gap:7px}
+.rc-text input,.rc-form input{border:1.5px solid #D5DCE8;border-radius:10px;padding:10px 12px;font:14px Inter,sans-serif;min-height:42px}
+.rc-consent{font-size:13.5px;line-height:1.5;color:var(--ink)}.rc-consent input{width:18px;height:18px;vertical-align:-3px}
+.rc-brief{white-space:pre-wrap;background:#0B1A3A;color:#E6ECF7;border-radius:12px;padding:12px;font:12.5px/1.55 ui-monospace,Menlo,Consolas,monospace;margin:0}
+@media (max-width:640px){.rc-launch .rc-lt small{display:none}.rc-panel{right:12px;bottom:12px;height:calc(100vh - 24px);max-height:none}}
 </style>
 </head>
 <body>
@@ -543,7 +578,7 @@ a.orbit-label:hover{color:#fff}
         <h1>Turning operations into <em>measurable growth.</em></h1>
         <p class="sub">25+ years of experience leading operations across retail, logistics, manufacturing and food services. Founder &amp; CEO of DBBS Group, Director at Aafina Technologies and Consulting Services Private Limited, and Global Head of Fulfillment at Garage. A startup builder from the first employee to 1,000, turning business needs into technology that works for real users.</p>
         <div class="btns">
-          <a class="btn primary" href="#enquiry">+ Start a Conversation</a>
+          <a class="btn primary" href="#enquiry" data-open-chat>+ Start a Conversation</a>
           <a class="btn wa" href="https://wa.me/918951409744" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4l-2-1l-.9.9a4 4 0 0 1-2.3-2.3l.9-.9l-1-2L9 9.5z"/></svg> WhatsApp</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/riishi-kalawatia/" target="_blank" rel="noopener">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -949,7 +984,7 @@ a.orbit-label:hover{color:#fff}
     <div class="wrap">
       <p class="eyebrow">Contact</p>
       <h2>Let&rsquo;s talk operations</h2>
-      <p class="lead">For consulting, partnerships or speaking, get in touch directly.</p>
+      <p class="lead">For consulting, partnerships or speaking, get in touch directly, or <a href="#enquiry" data-open-chat>answer a few questions with Riishi&rsquo;s assistant</a> so your first call starts prepared.</p>
       <p class="tz"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Working across time zones: <b>India (IST, UTC+5:30)</b> &middot; <b>Caribbean (EST, UTC&minus;5)</b></p>
       <div class="c-grid">
         <a class="c-card" href="tel:+918951409744">
@@ -986,7 +1021,8 @@ a.orbit-label:hover{color:#fff}
             <select id="f-topic" name="topic"><option>Startup / SME scaling &amp; health check</option><option>Post-AI business model consulting (Aafina)</option><option>Operations consulting</option><option>E-commerce &amp; fulfillment</option><option>Cash flow business model review</option><option>DBBS / Databrilliance services</option><option>FutureYou &amp; Skilligen HDI</option><option>Speaking or partnership</option><option>Other</option></select></div>
           <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
           <div class="full actions">
-            <button class="btn primary" type="submit">Send by email</button>
+            <input type="text" name="_gotcha" id="f-hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+            <button class="btn primary" type="submit">Send message</button>
             <button class="btn wa" type="button" id="f-wa"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1.2-1.4l-2-1l-.9.9a4 4 0 0 1-2.3-2.3l.9-.9l-1-2L9 9.5z"/></svg> Send on WhatsApp</button>
             <p class="note" id="f-note" role="status"></p>
           </div>
@@ -1145,9 +1181,17 @@ initSliders();
   }
   f.addEventListener('submit',function(e){
     e.preventDefault(); if(!ok()) return;
-    var sub='Enquiry: '+document.getElementById('f-topic').value;
-    location.href='mailto:riishi14.kalawatia@gmail.com?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(text());
-    note.textContent='Your email app should open with the message. If it does not, email riishi14.kalawatia@gmail.com.';
+    var hp=document.getElementById('f-hp'); if(hp&&hp.value) return;
+    var btn=f.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending\u2026';
+    var d=new FormData(f);
+    d.append('_subject','Website enquiry: '+document.getElementById('f-topic').value+' \u2013 '+document.getElementById('f-name').value.trim());
+    fetch('https://formspree.io/f/mgakbyyb',{method:'POST',body:d,headers:{'Accept':'application/json'}}).then(function(r){
+      if(!r.ok) throw new Error('send');
+      f.reset(); btn.textContent='Sent'; note.textContent='Thank you. Your message has reached Riishi, who will reply within one working day.';
+    }).catch(function(){
+      btn.disabled=false; btn.textContent='Send message';
+      note.innerHTML='Sorry, the message could not be sent. Please email <a href="mailto:riishi14.kalawatia@gmail.com">riishi14.kalawatia@gmail.com</a> or use WhatsApp.';
+    });
   });
   document.getElementById('f-wa').addEventListener('click',function(){
     if(!ok()) return;
@@ -1169,5 +1213,6 @@ initSliders();
 </script>
 <script>document.querySelectorAll('.cf-toggle button').forEach(function(b){b.addEventListener('click',function(){var t=b.parentNode;t.querySelectorAll('button').forEach(function(x){x.classList.remove('on');x.setAttribute('aria-selected','false')});b.classList.add('on');b.setAttribute('aria-selected','true');document.querySelector('.cf-board').setAttribute('data-era',b.dataset.era)})});</script>
 <script>document.querySelectorAll('a[data-topic]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('f-topic');if(!s)return;for(var i=0;i<s.options.length;i++){if(s.options[i].text===a.getAttribute('data-topic')){s.selectedIndex=i;break;}}});});</script>
+<script src="assets/riishi-chat.js" defer></script>
 </body>
 </html>
